@@ -45,6 +45,16 @@
             bindings = <&kp ESC>;
             key-positions = <0 1>;
         };
+
+        lclick {
+            bindings = <&mkp LCLK>;
+            key-positions = <19 18>;
+        };
+
+        rclick {
+            bindings = <&mkp RCLK>;
+            key-positions = <20 19>;
+        };
     };
 
     macros {
