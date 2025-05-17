@@ -60,6 +60,11 @@
             bindings = <&mkp MB4>;
             key-positions = <30 31>;
         };
+
+        mb5 {
+            bindings = <&mkp MB5>;
+            key-positions = <31 32>;
+        };
     };
 
     macros {
