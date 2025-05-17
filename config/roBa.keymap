@@ -55,6 +55,11 @@
             bindings = <&mkp RCLK>;
             key-positions = <20 19>;
         };
+
+        mb4 {
+            bindings = <&mkp MB4>;
+            key-positions = <30 31>;
+        };
     };
 
     macros {
