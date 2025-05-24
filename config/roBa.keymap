@@ -90,6 +90,34 @@
             bindings = <&kp LS(I) &kp L &kp I &kp V &kp E &kp I &kp N &kp LS(J) &kp A &kp P &kp A &kp N &kp N7 &kp EXCL>;
             label = "ONEPASSWORD";
         };
+
+        toMacStudio: toMacStudio {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "TOMACSTUDIO";
+        };
+
+        toiPad13: toiPad13 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "TOIPAD13";
+        };
+
+        toiPad11: toiPad11 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "TOIPAD11";
+        };
+
+        toiPhone: toiPhone {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&none>;
+            label = "TOIPHONE";
+        };
     };
 
     behaviors {
