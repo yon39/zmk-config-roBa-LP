@@ -73,7 +73,7 @@
         pwcpass: pwcpass {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(I) &kp L &kp I &kp V &kp E &kp I &kp N &kp LS(M) &kp A &kp R &kp N7 &kp EXCL>;
+            bindings = <&kp LS(I) &kp L &kp I &kp V &kp E &kp I &kp N &kp LS(A) &kp P &kp R &kp N7 &kp EXCL>;
             label = "PWCPASS";
         };
 
