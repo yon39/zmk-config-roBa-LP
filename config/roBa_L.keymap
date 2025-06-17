@@ -81,6 +81,15 @@
             flavor = "balanced";
             quick-tap-ms = <200>;
         };
+
+        // シングル・ダブルタップでの全角半角切り替えビヘイビア
+        sl_250: sl_250 {
+            compatible = "zmk,behavior-sticky-key";
+            label = "SL_250";
+            bindings = <&mo>;
+            #binding-cells = <1>;
+            release-after-ms = <250>;
+        };
     };
 
     macros {
@@ -100,6 +109,22 @@
             #binding-cells = <1>;
             bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &exit_AML>;
             label = "KP_exit_AML";
+        };
+
+        // シングル・ダブルタップでの全角半角切り替えマクロ
+        eager_tap_dance: eager_tap_dance {
+            compatible = "zmk,behavior-macro-two-param";
+            #binding-cells = <2>;
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &kp MACRO_PLACEHOLDER>,
+                <&macro_tap>,
+                <&exit_AML &macro_param_2to1 &sl_250 MACRO_PLACEHOLDER>;
+
+            label = "eager_tap_dance";
         };
     };
 
@@ -177,6 +202,19 @@
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>;
+        };
+
+        // シングル・ダブルタップでの全角半角切り替え
+        layer_0 {
+            bindings = <
+                &eager_tap_dance LANGUAGE_2 1
+            >;
+        };
+
+        layer_1 {
+            bindings = <
+                &eager_tap_dance LANGUAGE_1 1
+            >;
         };
     };
 };
