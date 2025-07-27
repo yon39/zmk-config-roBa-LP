@@ -80,10 +80,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E           &kp R                        &kp T                                                           &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&mt LEFT_SHIFT A    &kp S         &kp D           &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS       &kp H        &kp J  &kp K      &kp L    &mt RIGHT_SHIFT MINUS
-&mt LEFT_CONTROL Z  &kp X         &mt LEFT_ALT C  &kp V                        &kp B        &kp LANG1                          &kp LANGUAGE_1  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_CONTROL SLASH
-&kp LCTRL           &kp LEFT_WIN  &kp ESC         &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 1 INT_MUHENKAN      &kp BACKSPACE   &lt 2 ENTER                             &kp DEL
+&kp Q               &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &lt 5 I              &kp O    &kp P
+&mt LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp LS(LG(S))             &kp MINUS       &kp H                   &kp J  &kp K                &kp L    &mt RIGHT_SHIFT MINUS
+&mt LEFT_CONTROL Z  &kp X         &mt LEFT_ALT C  &kp V     &kp B      &kp LANG1                 &kp LANGUAGE_1  &kp N                   &kp M  &mt RIGHT_ALT COMMA  &kp DOT  &mt RIGHT_CONTROL SLASH
+&kp LCTRL           &kp LEFT_WIN  &kp ESC         &mkp MB1  &kp SPACE  &lt_to_layer_0 1 TAB      &kp BACKSPACE   &lt_to_layer_0 2 ENTER                                       &kp DEL
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -91,10 +91,10 @@
 
         FUNCTION {
             bindings = <
-&none   &none   &none      &none   &none                                  &none      &none          &none         &none      &none
-&kp F1  &kp F2  &kp F3     &kp F4  &kp F5   &kp F11      &kp LEFT_BRACE   &kp LEFT   &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp BACKSLASH
-&kp F6  &kp F7  &kp F8     &kp F9  &kp F10  &kp F12      &kp RIGHT_BRACE  &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &kp PIPE
-&trans  &trans  &kp GRAVE  &trans  &trans   &trans       &kp DELETE       &kp ENTER                                          &none
+&none   &none   &none      &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&kp F1  &kp F2  &kp F3     &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &none
+&kp F6  &kp F7  &kp F8     &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &none
+&trans  &trans  &kp GRAVE  &trans  &trans   &trans       &kp DELETE  &kp ENTER                                                      &none
             >;
         };
 
