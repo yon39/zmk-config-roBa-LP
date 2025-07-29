@@ -74,6 +74,7 @@
             tapping-term-ms = <150>;
             flavor = "hold-preferred";
         };
+
         hp_mod: hold_preferred_mod {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_PREFERRED_MOD";
@@ -89,10 +90,10 @@
 
         default_layer {
             bindings = <
-&kp Q               &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &kp I                &kp O      &kp P
-&hp_mod LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp ESC                   &kp CAPSLOCK    &kp H                   &kp J  &kp K                &kp L      &hp_mod RIGHT_SHIFT MINUS
+&kp Q                   &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &kp I                    &kp O      &kp P
+&hp_mod LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp CAPSLOCK              &mkp MB2        &kp H                   &kp J  &kp K                    &kp L      &hp_mod RIGHT_SHIFT MINUS
 &hp_mod LEFT_CONTROL Z  &kp X         &mt LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &hp_mod RIGHT_ALT COMMA  &lt 5 DOT  &hp_mod RIGHT_CONTROL SLASH
-&kp LC(LEFT_SHIFT)  &kp LEFT_WIN  &kp TILDE       &mkp MB1  &kp SPACE  &lt_to_layer_0 1 TAB      &kp BACKSPACE   &lt_to_layer_0 2 ENTER                                         &to 6
+&kp LC(LEFT_SHIFT)      &kp LEFT_WIN  &kp ESCAPE      &mkp MB1  &kp SPACE  &lt_to_layer_0 1 TAB      &kp BACKSPACE   &lt_to_layer_0 2 ENTER                                             &to 6
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -100,18 +101,18 @@
 
         FUNCTION {
             bindings = <
-&none              &none         &none      &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&none                  &none         &none      &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
 &hp_mod LEFT_SHIFT F1  &kp F2        &kp F3     &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
-&kp F6             &kp F7        &kp F8     &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
-&trans             &kp LEFT_WIN  &kp GRAVE  &trans  &trans   &trans       &kp DELETE  &kp ENTER                                                      &none
+&kp F6                 &kp F7        &kp F8     &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
+&trans                 &kp LEFT_WIN  &kp GRAVE  &trans  &trans   &trans       &kp DELETE  &kp ENTER                                                      &none
             >;
         };
 
         NUM {
             bindings = <
-&kp EXCLAMATION                 &kp AT         &kp HASH      &kp DOLLAR    &kp PERCENT                                      &kp CARET             &kp AMPERSAND          &kp ASTRK          &kp TILDE      &kp EQUAL
+&kp EXCLAMATION                     &kp AT         &kp HASH      &kp DOLLAR    &kp PERCENT                                      &kp CARET             &kp AMPERSAND          &kp ASTRK          &kp TILDE      &kp EQUAL
 &hp_mod LEFT_SHIFT N1               &kp N2         &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp SEMICOLON  &kp BACKSLASH
-&kp NUMBER_6                    &kp NUMBER_7   &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &kp COLON      &kp PIPE
+&kp NUMBER_6                        &kp NUMBER_7   &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &kp COLON      &kp PIPE
 &hp_mod LC(LEFT_SHIFT) KP_MULTIPLY  &kp KP_DIVIDE  &kp GRAVE     &mkp MB1      &kp SPACE     &kp TAB           &none            &trans                                                                         &none
             >;
         };
