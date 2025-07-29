@@ -100,10 +100,10 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION                 &kp AT           &kp HASH         &kp DOLLAR       &kp PERCENT                                         &kp CARET             &kp AMPERSAND          &kp ASTRK          &kp TILDE      &kp EQUAL
-&mt LEFT_SHIFT KP_NUMBER_1      &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_PLUS       &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp SEMICOLON  &kp BACKSLASH
-&kp KP_NUMBER_6                 &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_NUMBER_0  &kp KP_MINUS      &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &kp COLON      &kp PIPE
-&mt LC(LEFT_SHIFT) KP_MULTIPLY  &kp KP_DIVIDE    &kp GRAVE        &mkp MB1         &kp SPACE        &kp TAB           &none            &trans                                                                         &none
+&kp EXCLAMATION                 &kp AT         &kp HASH      &kp DOLLAR    &kp PERCENT                                      &kp CARET             &kp AMPERSAND          &kp ASTRK          &kp TILDE      &kp EQUAL
+&mt LEFT_SHIFT N1               &kp N2         &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp LEFT_BRACE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE   &kp SEMICOLON  &kp BACKSLASH
+&kp NUMBER_6                    &kp NUMBER_7   &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &kp RIGHT_BRACE  &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp DOUBLE_QUOTES  &kp COLON      &kp PIPE
+&mt LC(LEFT_SHIFT) KP_MULTIPLY  &kp KP_DIVIDE  &kp GRAVE     &mkp MB1      &kp SPACE     &kp TAB           &none            &trans                                                                         &none
             >;
         };
 
