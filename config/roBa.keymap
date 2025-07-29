@@ -120,10 +120,10 @@
 
         MOUSE {
             bindings = <
-&trans            &trans  &trans     &trans     &trans                          &trans  &trans    &trans    &trans  &trans
-&trans            &trans  &trans     &trans     &trans    &trans        &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
-&kp LEFT_CONTROL  &trans  &kp LC(C)  &kp LC(V)  &trans    &trans        &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
-&trans            &trans  &trans     &mkp MB1   &mkp MB4  &mkp MB5      &trans  &trans                              &trans
+&trans  &trans  &trans  &trans    &trans                          &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
+&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
+&trans  &trans  &trans  &mkp MB1  &kp SPACE  &kp TAB      &trans  &trans                              &trans
             >;
         };
 
