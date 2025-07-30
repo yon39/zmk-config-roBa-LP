@@ -56,14 +56,62 @@
 
         // 各マクロを呼び出すためのコンボ群
         // timeout-msを短く設定し、高速なロールオーバー入力でのみ発動するようにする
-        combo_lsft_enter: c_lsft_enter { timeout-ms = <125>; key-positions = <10 41>; bindings = <&M_LSFT_ENTER>; layers = <0>; };
-        combo_rsft_enter: c_rsft_enter { timeout-ms = <125>; key-positions = <21 41>; bindings = <&M_RSFT_ENTER>; layers = <0>; };
-        combo_lctl_enter: c_lctl_enter { timeout-ms = <125>; key-positions = <22 41>; bindings = <&M_LCTL_ENTER>; layers = <0>; };
-        combo_lalt_enter: c_lalt_enter { timeout-ms = <125>; key-positions = <24 41>; bindings = <&M_LALT_ENTER>; layers = <0>; };
-        combo_ralt_enter: c_ralt_enter { timeout-ms = <125>; key-positions = <31 41>; bindings = <&M_RALT_ENTER>; layers = <0>; };
-        combo_rctl_enter: c_rctl_enter { timeout-ms = <125>; key-positions = <33 41>; bindings = <&M_RCTL_ENTER>; layers = <0>; };
-        combo_lcs_enter: c_lcs_enter { timeout-ms = <125>; key-positions = <34 41>; bindings = <&M_LCS_ENTER>; layers = <0>; };
-        combo_lwin_enter: c_lwin_enter { timeout-ms = <125>; key-positions = <35 41>; bindings = <&M_LWIN_ENTER>; layers = <0>; };
+
+        combo_lsft_enter: c_lsft_enter {
+            timeout-ms = <125>;
+            key-positions = <10 41>;
+            bindings = <&M_LSFT_ENTER>;
+            layers = <0>;
+        };
+
+        combo_rsft_enter: c_rsft_enter {
+            timeout-ms = <125>;
+            key-positions = <21 41>;
+            bindings = <&M_RSFT_ENTER>;
+            layers = <0>;
+        };
+
+        combo_lctl_enter: c_lctl_enter {
+            timeout-ms = <125>;
+            key-positions = <22 41>;
+            bindings = <&M_LCTL_ENTER>;
+            layers = <0>;
+        };
+
+        combo_lalt_enter: c_lalt_enter {
+            timeout-ms = <125>;
+            key-positions = <24 41>;
+            bindings = <&M_LALT_ENTER>;
+            layers = <0>;
+        };
+
+        combo_ralt_enter: c_ralt_enter {
+            timeout-ms = <125>;
+            key-positions = <31 41>;
+            bindings = <&M_RALT_ENTER>;
+            layers = <0>;
+        };
+
+        combo_rctl_enter: c_rctl_enter {
+            timeout-ms = <125>;
+            key-positions = <33 41>;
+            bindings = <&M_RCTL_ENTER>;
+            layers = <0>;
+        };
+
+        combo_lcs_enter: c_lcs_enter {
+            timeout-ms = <125>;
+            key-positions = <34 41>;
+            bindings = <&M_LCS_ENTER>;
+            layers = <0>;
+        };
+
+        combo_lwin_enter: c_lwin_enter {
+            timeout-ms = <125>;
+            key-positions = <35 41>;
+            bindings = <&M_LWIN_ENTER>;
+            layers = <0>;
+        };
     };
 
     macros {
@@ -75,60 +123,113 @@
         };
 
         // 各「修飾キー + Enter」の組み合わせを実行するためのマクロ群
+
         M_LSFT_ENTER: m_lsft_enter {
             compatible = "zmk,behavior-macro";
             label = "M_LSFT_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LSHIFT>, <&macro_tap &kp ENTER>, <&macro_release &kp LSHIFT>;
+            bindings =
+                <&macro_press>,
+                <&kp LSHIFT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LSHIFT>;
         };
 
         M_RSFT_ENTER: m_rsft_enter {
             compatible = "zmk,behavior-macro";
             label = "M_RSFT_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RSHIFT>, <&macro_tap &kp ENTER>, <&macro_release &kp RSHIFT>;
+            bindings =
+                <&macro_press>,
+                <&kp RSHIFT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp RSHIFT>;
         };
 
         M_LCTL_ENTER: m_lctl_enter {
             compatible = "zmk,behavior-macro";
             label = "M_LCTL_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_tap &kp ENTER>, <&macro_release &kp LCTRL>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
 
         M_LALT_ENTER: m_lalt_enter {
             compatible = "zmk,behavior-macro";
             label = "M_LALT_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LALT>, <&macro_tap &kp ENTER>, <&macro_release &kp LALT>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LALT>;
         };
 
         M_RALT_ENTER: m_ralt_enter {
             compatible = "zmk,behavior-macro";
             label = "M_RALT_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RALT>, <&macro_tap &kp ENTER>, <&macro_release &kp RALT>;
+            bindings =
+                <&macro_press>,
+                <&kp RALT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp RALT>;
         };
 
         M_RCTL_ENTER: m_rctl_enter {
             compatible = "zmk,behavior-macro";
             label = "M_RCTL_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp RCTRL>, <&macro_tap &kp ENTER>, <&macro_release &kp RCTRL>;
+            bindings =
+                <&macro_press>,
+                <&kp RCTRL>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp RCTRL>;
         };
 
         M_LCS_ENTER: m_lcs_enter {
             compatible = "zmk,behavior-macro";
             label = "M_LCS_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LCTRL>, <&macro_press &kp LSHIFT>, <&macro_tap &kp ENTER>, <&macro_release &kp LSHIFT>, <&macro_release &kp LCTRL>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_press>,
+                <&kp LSHIFT>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LSHIFT>,
+                <&macro_release>,
+                <&kp LCTRL>;
         };
 
         M_LWIN_ENTER: m_lwin_enter {
             compatible = "zmk,behavior-macro";
             label = "M_LWIN_ENTER";
             #binding-cells = <0>;
-            bindings = <&macro_press &kp LWIN>, <&macro_tap &kp ENTER>, <&macro_release &kp LWIN>;
+            bindings =
+                <&macro_press>,
+                <&kp LWIN>,
+                <&macro_tap>,
+                <&kp ENTER>,
+                <&macro_release>,
+                <&kp LWIN>;
         };
     };
 
@@ -142,6 +243,7 @@
             tapping-term-ms = <150>;
 
             // キーを押したまま、次のキーを押し始めた瞬間に「ホールド」と判定する。
+
             flavor = "hold-preferred";
         };
 
@@ -151,10 +253,13 @@
             #binding-cells = <2>;
 
             // キーを押したまま、次のキーを押して、離した瞬間に「ホールド」と判定する。
+
             flavor = "balanced";
+
             // 直前のキー入力から150ミリ秒以内にこのキーが押されたら、それはタイピングのコンボの一部なので、タップとして扱う
             // require-prior-idle-ms = <150>;
             // タップから150msしたらホールドとして扱う
+
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
@@ -178,7 +283,7 @@
             bindings = <
 &kp EXCLAMATION                   &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp PIPE          &kp EQUAL
 &hp_mod LEFT_SHIFT N1             &kp N2           &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE  &kp SEMICOLON     &kp TILDE
-&kp NUMBER_6                      &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &trans     &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp QUESTION
+&kp NUMBER_6                      &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp QUESTION
 &hp_mod LC(LEFT_SHIFT) KP_DIVIDE  &kp KP_MULTIPLY  &kp EQUAL     &mkp MB1      &kp SPACE     &kp TAB           &none      &trans                                                                           &none
             >;
         };
@@ -188,16 +293,16 @@
 &none                  &none         &none      &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
 &hp_mod LEFT_SHIFT F1  &kp F2        &kp F3     &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
 &kp F6                 &kp F7        &kp F8     &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
-&trans                 &kp LEFT_WIN  &kp GRAVE  &trans  &trans   &trans       &kp DELETE  &kp ENTER                                                      &none
+&kp LEFT_CONTROL       &kp LEFT_WIN  &kp GRAVE  &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
             >;
         };
 
         AUTO_MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans    &trans                          &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &trans
-&trans  &trans  &trans  &trans    &trans     &trans       &trans  &trans  &mkp MB1  &mkp MB2  &mo 5   &to 4
-&trans  &trans  &trans  &mkp MB1  &kp SPACE  &kp TAB      &trans  &trans                              &trans
+&kp LC(Q)  &kp LC(W)  &kp LC(E)  &kp LC(R)  &kp LC(T)                      &none  &none     &none     &none  &none
+&kp LC(A)  &kp LC(S)  &kp LC(D)  &kp LC(F)  &kp LC(G)  &none        &none  &none  &mkp MB4  &mkp MB5  &none  &none
+&kp LC(Z)  &kp LC(X)  &kp LC(C)  &kp LC(V)  &kp LC(B)  &none        &none  &none  &mkp MB1  &mkp MB2  &mo 5  &to 4
+&none      &kp LWIN   &none      &mkp MB1   &kp SPACE  &kp TAB      &none  &none                             &none
             >;
         };
 
@@ -221,10 +326,10 @@
 
         layer_6 {
             bindings = <
-&trans         &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &trans                                      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans         &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &trans         &trans           &bt BT_CLR  &trans        &trans        &trans        &trans        &trans
-&kp C_BRI_MIN  &kp C_BRI_DN  &none             &kp C_BRI_UP  &kp C_BRI_MAX  &bootloader      &trans      &trans        &trans        &trans        &trans        &trans
-&trans         &trans        &trans            &trans        &trans         &trans           &trans      &trans                                                  &to 0
+&none          &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none          &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none          &none      &bt BT_CLR  &none         &none         &none         &none         &none
+&kp C_BRI_MIN  &kp C_BRI_DN  &none             &kp C_BRI_UP  &kp C_BRI_MAX  &none      &none       &none         &none         &none         &none         &none
+&none          &none         &none             &none         &none          &none      &none       &none                                                   &to 0
             >;
         };
     };
