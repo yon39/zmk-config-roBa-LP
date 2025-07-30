@@ -290,10 +290,10 @@
 
         FUNCTION {
             bindings = <
-&none                  &none         &none      &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-&hp_mod LEFT_SHIFT F1  &kp F2        &kp F3     &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
-&kp F6                 &kp F7        &kp F8     &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
-&kp LEFT_CONTROL       &kp LEFT_WIN  &kp GRAVE  &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
+&none                  &none         &none   &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&hp_mod LEFT_SHIFT F1  &kp F2        &kp F3  &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
+&kp F6                 &kp F7        &kp F8  &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
+&kp LEFT_CONTROL       &kp LEFT_WIN  &none   &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
             >;
         };
 
