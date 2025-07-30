@@ -96,7 +96,7 @@
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
             // 41番目のキーを連続で押した場合は、必ずHoldとして扱う。
-            hold-positions = <41>;
+            // hold-positions = <41>;
         };
     };
 
