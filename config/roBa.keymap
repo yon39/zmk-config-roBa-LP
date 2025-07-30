@@ -72,6 +72,7 @@
 
             #binding-cells = <2>;
             tapping-term-ms = <150>;
+            // キーを押したまま、次のキーを押し始めた瞬間に「ホールド」と判定する。
             flavor = "hold-preferred";
         };
 
@@ -79,8 +80,12 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_PREFERRED_MOD";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
-            tapping-term-ms = <200>;
+            // キーを押したまま、次のキーを押して、離した瞬間に「ホールド」と判定する。
+            flavor = "balanced";
+            // 直前のキー入力から150ミリ秒以内にこのキーが押されたら、それはタイピングのコンボの一部なので、絶対にタップとして扱う
+            require-prior-idle-ms = <150>;
+            // タップから200msしたらホールドとして扱う
+            tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
     };
