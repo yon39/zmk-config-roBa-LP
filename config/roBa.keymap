@@ -56,15 +56,14 @@
 
         // 各マクロを呼び出すためのコンボ群
         // timeout-msを短く設定し、高速なロールオーバー入力でのみ発動するようにする
-        combo_lsft_enter: c_lsft_enter { timeout-ms = <150>; key-positions = <10 41>; bindings = <&M_LSFT_ENTER>; layers = <0 1 2 3 4 5 6>; };
-        combo_rsft_enter: c_rsft_enter { timeout-ms = <150>; key-positions = <21 41>; bindings = <&M_RSFT_ENTER>; layers = <0 1 2 3 4 5 6>; };
-        combo_lctl_enter: c_lctl_enter { timeout-ms = <150>; key-positions = <22 41>; bindings = <&M_LCTL_ENTER>; layers = <0 1 2 3 4 5 6>; };
-        combo_lalt_enter: c_lalt_enter { timeout-ms = <150>; key-positions = <24 41>; bindings = <&M_LALT_ENTER>; layers = <0 1 2 3 4 5 6>; };
-        combo_ralt_enter: c_ralt_enter { timeout-ms = <150>; key-positions = <31 41>; bindings = <&M_RALT_ENTER>; layers = <0 1 2 3 4 5 6>; };
-        combo_rctl_enter: c_rctl_enter { timeout-ms = <150>; key-positions = <33 41>; bindings = <&M_RCTL_ENTER>; layers = <0 1 2 3 4 5 6>; };
-        combo_lcs_enter: c_lcs_enter { timeout-ms = <150>; key-positions = <34 41>; bindings = <&M_LCS_ENTER>; layers = <0 1 2 3 4 5 6>; };
-        combo_lwin_enter: c_lwin_enter { timeout-ms = <150>; key-positions = <35 41>; bindings = <&M_LWIN_ENTER>; layers = <0 1 2 3 4 5 6>; };
-
+        combo_lsft_enter: c_lsft_enter { timeout-ms = <125>; key-positions = <10 41>; bindings = <&M_LSFT_ENTER>; layers = <0>; };
+        combo_rsft_enter: c_rsft_enter { timeout-ms = <125>; key-positions = <21 41>; bindings = <&M_RSFT_ENTER>; layers = <0>; };
+        combo_lctl_enter: c_lctl_enter { timeout-ms = <125>; key-positions = <22 41>; bindings = <&M_LCTL_ENTER>; layers = <0>; };
+        combo_lalt_enter: c_lalt_enter { timeout-ms = <125>; key-positions = <24 41>; bindings = <&M_LALT_ENTER>; layers = <0>; };
+        combo_ralt_enter: c_ralt_enter { timeout-ms = <125>; key-positions = <31 41>; bindings = <&M_RALT_ENTER>; layers = <0>; };
+        combo_rctl_enter: c_rctl_enter { timeout-ms = <125>; key-positions = <33 41>; bindings = <&M_RCTL_ENTER>; layers = <0>; };
+        combo_lcs_enter: c_lcs_enter { timeout-ms = <125>; key-positions = <34 41>; bindings = <&M_LCS_ENTER>; layers = <0>; };
+        combo_lwin_enter: c_lwin_enter { timeout-ms = <125>; key-positions = <35 41>; bindings = <&M_LWIN_ENTER>; layers = <0>; };
     };
 
     macros {
