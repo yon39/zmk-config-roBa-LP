@@ -29,87 +29,9 @@
     combos {
         compatible = "zmk,combos";
 
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-
-        // 各マクロを呼び出すためのコンボ群
-        // timeout-msを短く設定し、高速なロールオーバー入力でのみ発動するようにする
-
-        combo_lsft_enter: c_lsft_enter {
-            timeout-ms = <125>;
-            key-positions = <10 41>;
-            bindings = <&M_LSFT_ENTER>;
-            layers = <0>;
-        };
-
-        combo_rsft_enter: c_rsft_enter {
-            timeout-ms = <125>;
-            key-positions = <21 41>;
-            bindings = <&M_RSFT_ENTER>;
-            layers = <0>;
-        };
-
-        combo_lctl_enter: c_lctl_enter {
-            timeout-ms = <125>;
-            key-positions = <22 41>;
-            bindings = <&M_LCTL_ENTER>;
-            layers = <0>;
-        };
-
-        combo_lalt_enter: c_lalt_enter {
-            timeout-ms = <125>;
-            key-positions = <24 41>;
-            bindings = <&M_LALT_ENTER>;
-            layers = <0>;
-        };
-
-        combo_ralt_enter: c_ralt_enter {
-            timeout-ms = <125>;
-            key-positions = <31 41>;
-            bindings = <&M_RALT_ENTER>;
-            layers = <0>;
-        };
-
-        combo_rctl_enter: c_rctl_enter {
-            timeout-ms = <125>;
-            key-positions = <33 41>;
-            bindings = <&M_RCTL_ENTER>;
-            layers = <0>;
-        };
-
-        combo_lcs_enter: c_lcs_enter {
-            timeout-ms = <125>;
-            key-positions = <34 41>;
-            bindings = <&M_LCS_ENTER>;
-            layers = <0>;
-        };
-
-        combo_lwin_enter: c_lwin_enter {
-            timeout-ms = <125>;
-            key-positions = <35 41>;
-            bindings = <&M_LWIN_ENTER>;
+        combo_shift_enter_l: c_shift_enter_l {
+            key-positions = <10 41 20>; // L_SHIFT/A + Layer1/Enter + L
+            bindings = <&M_SHIFT_L_ON_LAYER1>;
             layers = <0>;
         };
     };
@@ -122,114 +44,11 @@
             label = "TO_LAYER_0";
         };
 
-        // 各「修飾キー + Enter」の組み合わせを実行するためのマクロ群
-
-        M_LSFT_ENTER: m_lsft_enter {
+        M_SHIFT_L_ON_LAYER1: m_shift_l_on_layer1 {
             compatible = "zmk,behavior-macro";
-            label = "M_LSFT_ENTER";
+            label = "M_SHIFT_L_ON_LAYER1";
             #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LSHIFT>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp LSHIFT>;
-        };
-
-        M_RSFT_ENTER: m_rsft_enter {
-            compatible = "zmk,behavior-macro";
-            label = "M_RSFT_ENTER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RSHIFT>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp RSHIFT>;
-        };
-
-        M_LCTL_ENTER: m_lctl_enter {
-            compatible = "zmk,behavior-macro";
-            label = "M_LCTL_ENTER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-
-        M_LALT_ENTER: m_lalt_enter {
-            compatible = "zmk,behavior-macro";
-            label = "M_LALT_ENTER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LALT>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp LALT>;
-        };
-
-        M_RALT_ENTER: m_ralt_enter {
-            compatible = "zmk,behavior-macro";
-            label = "M_RALT_ENTER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RALT>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp RALT>;
-        };
-
-        M_RCTL_ENTER: m_rctl_enter {
-            compatible = "zmk,behavior-macro";
-            label = "M_RCTL_ENTER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp RCTRL>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp RCTRL>;
-        };
-
-        M_LCS_ENTER: m_lcs_enter {
-            compatible = "zmk,behavior-macro";
-            label = "M_LCS_ENTER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LCTRL>,
-                <&macro_press>,
-                <&kp LSHIFT>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp LSHIFT>,
-                <&macro_release>,
-                <&kp LCTRL>;
-        };
-
-        M_LWIN_ENTER: m_lwin_enter {
-            compatible = "zmk,behavior-macro";
-            label = "M_LWIN_ENTER";
-            #binding-cells = <0>;
-            bindings =
-                <&macro_press>,
-                <&kp LWIN>,
-                <&macro_tap>,
-                <&kp ENTER>,
-                <&macro_release>,
-                <&kp LWIN>;
+            bindings = <&kp LS(SEMICOLON)>;
         };
     };
 
