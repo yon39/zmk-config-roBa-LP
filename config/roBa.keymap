@@ -44,6 +44,17 @@
             label = "TO_LAYER_0";
         };
 
+        // ======================================================================
+        // マウスドラッグ用のマクロ
+        // このキーを押している間、レイヤー4(MOUSE)に移動し、左クリックをホールド。
+        // ======================================================================
+        M_MOUSE_DRAG: m_mouse_drag {
+            compatible = "zmk,behavior-macro";
+            label = "M_MOUSE_DRAG";
+            #binding-cells = <0>;
+            bindings = <&mo 4>, <&mkp MB1>;
+        };
+
         M_SHIFT_L_ON_LAYER1: m_shift_l_on_layer1 {
             compatible = "zmk,behavior-macro";
             label = "M_SHIFT_L_ON_LAYER1";
@@ -138,7 +149,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                                 &trans           &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans           &mkp MB4  &mkp MB5  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans           &mkp MB1  &mkp MB2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans             &trans           &M_MOUSE_DRAG  &mkp MB2  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp LC(PAGE_DOWN)  &kp LC(PAGE_UP)                              &trans
             >;
         };
