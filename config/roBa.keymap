@@ -43,6 +43,18 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        // ======================================================================
+        // マウスドラッグ用のマクロ
+        // このキーを押している間、レイヤー4(MOUSE)に移動し、左クリックをホールド。
+        // ======================================================================
+
+        M_SHIFT_L_ON_LAYER1: m_shift_l_on_layer1 {
+            compatible = "zmk,behavior-macro";
+            label = "M_SHIFT_L_ON_LAYER1";
+            #binding-cells = <0>;
+            bindings = <&kp LS(SEMICOLON)>;
+        };
     };
 
     behaviors {
@@ -74,37 +86,6 @@
 
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
-        };
-
-        // ======================================================================
-        // 
-        // このキーを押している間、レイヤー4(MOUSE)に移動し、左クリックをホールド。
-        // ======================================================================
-
-        hold_release_macro: hold_release_macro {
-            compatible = "zmk,behavior-macro";
-            label = "HOLD_RELEASE_MACRO";
-            #binding-cells = ;
-            bindings
-                // --- ホールド時に実行されるアクション ---
-                = <&macro_press &mo 3>      // layer3をプレス
-                , <&macro_press &mkp MB1>        // Nキーをプレス
-                // --- キー解放まで待機 ---
-                , <&macro_pause_for_release>
-                // --- ホールド後リリース時に実行されるアクション ---
-                , <&macro_release &mkp MB1>      // Nキーをリリース
-                , <&macro_release &mo 3>    // layer3をリリース
-                , <&to 5>                     // layer5へ遷移
-                ;
-        };
-
-        custom_mouse_ht: custom_mouse_hold_tap {
-            compatible = "zmk,behavior-hold-tap";
-            label = "CUSTOM_MOUSE_HT";
-            #binding-cells = ;
-            tapping-term-ms = <150>; // ユーザーの好みに合わせて調整可能
-            flavor = "tap-preferred"; // タップの応答性を優先する場合に推奨
-            bindings = <&hold_release_macro>, <&kp MB1>;
         };
     };
 
@@ -162,7 +143,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                               &trans             &trans    &trans    &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &mkp MB4  &mkp MB5  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &custom_mouse_ht 0 0 &mkp MB2 &trans &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &mo 3     &mkp MB2  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                              &trans
             >;
         };
