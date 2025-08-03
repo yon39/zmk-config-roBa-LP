@@ -100,6 +100,15 @@
             tapping-term-ms = <150>;
             bindings = <&kp>, <&kp>;
         };
+
+        custom_mb1: custom_mb1 {
+            compatible = "zmk,behavior-hold-tap";
+            label = "CUSTOM_MB1";
+            bindings = <&mouse_drag_ht>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+        };
     };
 
     keymap {
@@ -154,10 +163,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                               &trans             &trans    &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &mkp MB4  &mkp MB5  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &mo 3     &mkp MB2  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                              &trans
+&trans  &trans  &trans  &trans  &trans                               &trans             &trans             &trans    &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &mkp MB4           &mkp MB5  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans           &trans             &custom_mb1 0 MB1  &mkp MB2  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                                       &trans
             >;
         };
 
