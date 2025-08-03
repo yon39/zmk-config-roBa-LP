@@ -270,10 +270,10 @@
 
         default_layer {
             bindings = <
-&kp Q                            &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &kp I                    &kp O      &kp P
-&hp_mod LEFT_SHIFT A             &kp S         &kp D           &kp F     &kp G      &kp CAPSLOCK              &mkp MB2        &kp H                   &kp J  &kp K                    &kp L      &hp_mod RIGHT_SHIFT MINUS
-&hp_mod LEFT_CONTROL Z           &kp X         &mt LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &hp_mod RIGHT_ALT COMMA  &lt 5 DOT  &hp_mod RIGHT_CONTROL SLASH
-&mt LC(LEFT_SHIFT) LEFT_CONTROL  &kp LEFT_WIN  &kp ESCAPE      &mkp MB1  &kp SPACE  &lt_to_layer_0 2 TAB      &kp BACKSPACE   &lt_to_layer_0 1 ENTER                                             &to 6
+&kp Q                   &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &kp I                    &kp O      &kp P
+&hp_mod LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp CAPSLOCK              &mkp MB2        &kp H                   &kp J  &kp K                    &kp L      &hp_mod RIGHT_SHIFT MINUS
+&hp_mod LEFT_CONTROL Z  &kp X         &mt LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &hp_mod RIGHT_ALT COMMA  &lt 5 DOT  &hp_mod RIGHT_CONTROL SLASH
+&kp LEFT_CONTROL        &kp LEFT_WIN  &kp ESCAPE      &mkp MB1  &kp SPACE  &lt_to_layer_0 2 TAB      &kp BACKSPACE   &lt_to_layer_0 1 ENTER                                             &to 6
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -283,7 +283,7 @@
             bindings = <
 &kp EXCLAMATION                   &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp PIPE          &kp EQUAL
 &hp_mod LEFT_SHIFT N1             &kp N2           &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE  &kp SEMICOLON     &kp TILDE
-&kp NUMBER_6                      &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp QUESTION
+&mt LEFT_CONTROL NUMBER_6         &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp QUESTION
 &hp_mod LC(LEFT_SHIFT) KP_DIVIDE  &kp KP_MULTIPLY  &kp EQUAL     &mkp MB1      &kp SPACE     &kp TAB           &none      &trans                                                                           &none
             >;
         };
@@ -292,7 +292,7 @@
             bindings = <
 &none                  &none         &none   &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
 &hp_mod LEFT_SHIFT F1  &kp F2        &kp F3  &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
-&kp F6                 &kp F7        &kp F8  &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
+&mt LEFT_CONTROL F6    &kp F7        &kp F8  &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
 &kp LEFT_CONTROL       &kp LEFT_WIN  &none   &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
             >;
         };
@@ -329,7 +329,7 @@
 &none          &kp C_PREV    &kp C_PLAY_PAUSE  &kp C_NEXT    &none                                 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &none          &kp C_VOL_DN  &kp C_MUTE        &kp C_VOL_UP  &none          &none      &bt BT_CLR  &none         &none         &none         &none         &none
 &kp C_BRI_MIN  &kp C_BRI_DN  &none             &kp C_BRI_UP  &kp C_BRI_MAX  &none      &none       &none         &none         &none         &none         &none
-&none          &none         &none             &none         &none          &none      &none       &none                                                   &to 0
+&none          &none         &none             &mkp MB1      &none          &none      &none       &none                                                   &to 0
             >;
         };
     };
