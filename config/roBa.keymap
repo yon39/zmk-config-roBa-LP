@@ -109,7 +109,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_MB1";
             #binding-cells = <2>;
-            tapping-term-ms = <300>;
+            tapping-term-ms = <150>;
             flavor = "hold-preferred"; // ホールド優先のフレーバー
             hold-while-undecided; // キーを押した瞬間にhold-tapの「ホールド」側のアクションがトリガーさせる。
             bindings = <&mouse_drag_ht>, <&mkp>;
