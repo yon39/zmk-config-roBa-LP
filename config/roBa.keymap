@@ -86,7 +86,8 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT    &mt LEFT_SHIFT ESCAPE  &lt 2 SPACE  &lt 1 TAB          &mt RS(RIGHT_WIN) BACKSPACE  &lt 3 ENTER                                             &kp ESCAPE
             >;
 
-           sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+           // デバッグ用：時計回り = 音量UP、反時計回り = 音量DOWN
+           sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
 
         SYMBOL {
