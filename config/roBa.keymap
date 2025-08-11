@@ -5,8 +5,8 @@
 
 &trackball {
     scroll-layers = <3>;
-    // automouse-layer = <4>;
 
+    // automouse-layer = <4>;
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -21,9 +21,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -37,6 +35,7 @@
         // マウスドラッグ専用のマクロ
         // このキーを押している間、レイヤー4(MOUSE)に移動し、左クリックをホールド。
         // ======================================================================
+
         mouse_drag_ht: mouse_drag_ht {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -60,17 +59,18 @@
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
+
             #binding-cells = <2>;
             tapping-term-ms = <150>;
             flavor = "hold-preferred";
             hold-while-undecided;
         };
 
-
         // ----------------------------------------------------------------------
         // Hold-Preferred Flavor (ホールド優先)
         // ホールドを多用する場合におすすめ。最も反応が良い。
         // ----------------------------------------------------------------------
+
         hp_ht: hold_preferred_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_PREFERRED_HT";
@@ -85,6 +85,7 @@
         // Balanced Flavor (バランス型)
         // 自然なタイピングフィールを求める場合におすすめ。
         // ----------------------------------------------------------------------
+
         balanced_ht: balanced_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "BALANCED_HT";
@@ -98,6 +99,7 @@
         // Tap-Preferred Flavor (タップ優先)
         // タップ操作を確実にしたい場合におすすめ。
         // ----------------------------------------------------------------------
+
         tap_pref_ht: tap_preferred_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_PREFERRED_HT";
@@ -110,6 +112,7 @@
         // ----------------------------------------------------------------------
         // マウス専用ドラッグのBehavor
         // ----------------------------------------------------------------------
+
         mouse_drag: mouse_drag_macro {
             compatible = "zmk,behavior-hold-tap";
             label = "MOUSE_DRAG_MACRO";
@@ -126,10 +129,10 @@
 
         default_layer {
             bindings = <
-&kp Q                   &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &kp I                    &kp O      &kp P
-&balanced_ht LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp CAPSLOCK              &kp F7          &kp H                   &kp J  &kp K                    &kp L      &balanced_ht RIGHT_SHIFT MINUS
-&balanced_ht LEFT_CONTROL Z  &kp X         &balanced_ht LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &balanced_ht RIGHT_ALT COMMA  &lt_to_layer_0 3 DOT  &balanced_ht RIGHT_CONTROL SLASH
-&kp LEFT_CONTROL        &kp LEFT_WIN  &kp ESCAPE      &mkp MB1  &kp SPACE  &lt_to_layer_0 2 TAB      &kp BACKSPACE   &lt_to_layer_0 1 ENTER                                             &to 5
+&kp Q                        &kp W         &kp E       &kp R     &kp T                                                &kp Y                   &kp U  &kp I                         &kp O                 &kp P
+&balanced_ht LEFT_SHIFT A    &kp S         &kp D       &kp F     &kp G      &kp CAPSLOCK              &kp F7          &kp H                   &kp J  &kp K                         &kp L                 &balanced_ht RIGHT_SHIFT MINUS
+&balanced_ht LEFT_CONTROL Z  &kp X         &kp C       &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &balanced_ht RIGHT_ALT COMMA  &lt_to_layer_0 3 DOT  &balanced_ht RIGHT_CONTROL SLASH
+&kp LEFT_CONTROL             &kp LEFT_WIN  &kp ESCAPE  &mkp MB1  &kp SPACE  &lt_to_layer_0 2 TAB      &kp BACKSPACE   &lt_to_layer_0 1 ENTER                                                             &to 5
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -137,19 +140,19 @@
 
         NUM_SYM {
             bindings = <
-&kp EXCLAMATION                   &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp PIPE          &kp EQUAL
+&kp EXCLAMATION                        &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp PIPE          &kp EQUAL
 &balanced_ht LEFT_SHIFT N1             &kp N2           &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE  &kp SEMICOLON     &kp TILDE
-&balanced_ht LEFT_CONTROL NUMBER_6         &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp SLASH
+&balanced_ht LEFT_CONTROL NUMBER_6     &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp SLASH
 &balanced_ht LC(LEFT_SHIFT) KP_DIVIDE  &kp KP_MULTIPLY  &kp EQUAL     &mkp MB1      &kp SPACE     &kp TAB           &none      &trans                                                                           &none
             >;
         };
 
         FUNCTION {
             bindings = <
-&none                  &none         &none       &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-&balanced_ht LEFT_SHIFT F1  &kp F2        &kp F3      &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
-&balanced_ht LEFT_CONTROL F6    &kp F7        &kp F8      &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
-&kp LEFT_CONTROL       &kp LEFT_WIN  &kp ESCAPE  &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
+&none                         &none         &none       &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&balanced_ht LEFT_SHIFT F1    &kp F2        &kp F3      &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
+&balanced_ht LEFT_CONTROL F6  &kp F7        &kp F8      &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
+&kp LEFT_CONTROL              &kp LEFT_WIN  &kp ESCAPE  &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
             >;
         };
 
