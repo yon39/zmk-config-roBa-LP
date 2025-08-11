@@ -28,12 +28,6 @@
 / {
     combos {
         compatible = "zmk,combos";
-
-        combo_shift_enter_l: c_shift_enter_l {
-            key-positions = <10 41 20>; // L_SHIFT/A + Layer1/Enter + L
-            bindings = <&M_SHIFT_L_ON_LAYER1>;
-            layers = <0>;
-        };
     };
 
     macros {
@@ -45,17 +39,9 @@
         };
 
         // ======================================================================
-        // マウスドラッグ用のマクロ
+        // マウスドラッグ専用のマクロ
         // このキーを押している間、レイヤー4(MOUSE)に移動し、左クリックをホールド。
         // ======================================================================
-
-        M_SHIFT_L_ON_LAYER1: m_shift_l_on_layer1 {
-            compatible = "zmk,behavior-macro";
-            label = "M_SHIFT_L_ON_LAYER1";
-            #binding-cells = <0>;
-            bindings = <&kp LS(SEMICOLON)>;
-        };
-
         mouse_drag_ht: mouse_drag_ht {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -127,8 +113,7 @@
         };
 
         // ----------------------------------------------------------------------
-        // Tap-Preferred Flavor (タップ優先)
-        // タップ操作を確実にしたい場合におすすめ。
+        // マウス専用ドラッグのBehavor
         // ----------------------------------------------------------------------
         custom_mb1: custom_mb1 {
             compatible = "zmk,behavior-hold-tap";
