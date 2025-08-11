@@ -3,11 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-&mt {
-    flavor = "balanced";
-    quick-tap-ms = <0>;
-};
-
 &trackball {
     scroll-layers = <3>;
     automouse-layer = <4>;
@@ -133,7 +128,7 @@
             bindings = <
 &kp Q                   &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &kp I                    &kp O      &kp P
 &balanced_ht LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp CAPSLOCK              &kp F7          &kp H                   &kp J  &kp K                    &kp L      &balanced_ht RIGHT_SHIFT MINUS
-&balanced_ht LEFT_CONTROL Z  &kp X         &mt LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &balanced_ht RIGHT_ALT COMMA  &lt 3 DOT  &balanced_ht RIGHT_CONTROL SLASH
+&balanced_ht LEFT_CONTROL Z  &kp X         &balanced_ht LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &balanced_ht RIGHT_ALT COMMA  &lt 3 DOT  &balanced_ht RIGHT_CONTROL SLASH
 &kp LEFT_CONTROL        &kp LEFT_WIN  &kp ESCAPE      &mkp MB1  &kp SPACE  &lt_to_layer_0 2 TAB      &kp BACKSPACE   &lt_to_layer_0 1 ENTER                                             &to 5
             >;
 
@@ -144,7 +139,7 @@
             bindings = <
 &kp EXCLAMATION                   &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp PIPE          &kp EQUAL
 &balanced_ht LEFT_SHIFT N1             &kp N2           &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE  &kp SEMICOLON     &kp TILDE
-&mt LEFT_CONTROL NUMBER_6         &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp SLASH
+&balanced_ht LEFT_CONTROL NUMBER_6         &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp SLASH
 &balanced_ht LC(LEFT_SHIFT) KP_DIVIDE  &kp KP_MULTIPLY  &kp EQUAL     &mkp MB1      &kp SPACE     &kp TAB           &none      &trans                                                                           &none
             >;
         };
@@ -153,7 +148,7 @@
             bindings = <
 &none                  &none         &none       &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
 &balanced_ht LEFT_SHIFT F1  &kp F2        &kp F3      &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
-&mt LEFT_CONTROL F6    &kp F7        &kp F8      &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
+&balanced_ht LEFT_CONTROL F6    &kp F7        &kp F8      &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
 &kp LEFT_CONTROL       &kp LEFT_WIN  &kp ESCAPE  &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
             >;
         };
