@@ -5,7 +5,7 @@
 
 &trackball {
     scroll-layers = <3>;
-    automouse-layer = <4>;
+    // automouse-layer = <4>;
 
     // arrows {
     //     layers = <3>;
@@ -162,7 +162,7 @@
             >;
         };
 
-        AUTO_MOUSE {
+        MOUSE {
             bindings = <
 &kp LC(Q)         &kp LC(W)  &kp LC(E)   &kp LC(R)  &kp LC(T)                                &none              &none     &none     &none  &none
 &kp LC(A)         &kp LC(S)  &kp LC(D)   &kp LC(F)  &kp LC(G)  &none        &none            &none              &mkp MB4  &mkp MB5  &none  &none
