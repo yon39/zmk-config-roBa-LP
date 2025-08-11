@@ -76,7 +76,7 @@
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behosieavior-hold-tap";
+            compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
             #binding-cells = <2>;
@@ -126,6 +126,10 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // ----------------------------------------------------------------------
+        // Tap-Preferred Flavor (タップ優先)
+        // タップ操作を確実にしたい場合におすすめ。
+        // ----------------------------------------------------------------------
         custom_mb1: custom_mb1 {
             compatible = "zmk,behavior-hold-tap";
             label = "CUSTOM_MB1";
