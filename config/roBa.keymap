@@ -76,32 +76,53 @@
 
     behaviors {
         lt_to_layer_0: lt_to_layer_0 {
-            compatible = "zmk,behavior-hold-tap";
+            compatible = "zmk,behosieavior-hold-tap";
             label = "LAYER_TAP_TO_0";
             bindings = <&mo>, <&to_layer_0>;
-
             #binding-cells = <2>;
             tapping-term-ms = <150>;
-
-            // キーを押したまま、次のキーを押し始めた瞬間に「ホールド」と判定する。
-
             flavor = "hold-preferred";
+            hold-while-undecided;
         };
 
-        hp_mod: hold_preferred_mod {
+
+        // ----------------------------------------------------------------------
+        // Hold-Preferred Flavor (ホールド優先)
+        // ホールドを多用する場合におすすめ。最も反応が良い。
+        // ----------------------------------------------------------------------
+        hp_ht: hold_preferred_hold_tap {
             compatible = "zmk,behavior-hold-tap";
-            label = "HOLD_PREFERRED_MOD";
+            label = "HOLD_PREFERRED_HT";
             #binding-cells = <2>;
-
-            // キーを押したまま、次のキーを押して、離した瞬間に「ホールド」と判定する。
-
-            flavor = "balanced";
-
-            // 直前のキー入力から150ミリ秒以内にこのキーが押されたら、それはタイピングのコンボの一部なので、タップとして扱う
-            // require-prior-idle-ms = <150>;
-            // タップから150msしたらホールドとして扱う
-
             tapping-term-ms = <150>;
+            flavor = "hold-preferred";
+            hold-while-undecided;
+            bindings = <&kp>, <&kp>;
+        };
+
+        // ----------------------------------------------------------------------
+        // Balanced Flavor (バランス型)
+        // 自然なタイピングフィールを求める場合におすすめ。
+        // ----------------------------------------------------------------------
+        balanced_ht: balanced_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "BALANCED_HT";
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "balanced"; // キーを押したまま、次のキーを押して、離した瞬間に「ホールド」と判定する。
+            bindings = <&kp>, <&kp>;
+        };
+
+        // ----------------------------------------------------------------------
+        // Tap-Preferred Flavor (タップ優先)
+        // タップ操作を確実にしたい場合におすすめ。
+        // ----------------------------------------------------------------------
+        tap_pref_ht: tap_preferred_hold_tap {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_PREFERRED_HT";
+            #binding-cells = <2>;
+            tapping-term-ms = <250>;// タップ優先なので、tapping-termを少し長めにすると誤爆減らせるかも
+            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
 
@@ -122,8 +143,8 @@
         default_layer {
             bindings = <
 &kp Q                   &kp W         &kp E           &kp R     &kp T                                                &kp Y                   &kp U  &kp I                    &kp O      &kp P
-&hp_mod LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp CAPSLOCK              &kp F7          &kp H                   &kp J  &kp K                    &kp L      &hp_mod RIGHT_SHIFT MINUS
-&hp_mod LEFT_CONTROL Z  &kp X         &mt LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &hp_mod RIGHT_ALT COMMA  &lt 3 DOT  &hp_mod RIGHT_CONTROL SLASH
+&balanced_ht LEFT_SHIFT A    &kp S         &kp D           &kp F     &kp G      &kp CAPSLOCK              &kp F7          &kp H                   &kp J  &kp K                    &kp L      &balanced_ht RIGHT_SHIFT MINUS
+&balanced_ht LEFT_CONTROL Z  &kp X         &mt LEFT_ALT C  &kp V     &kp B      &kp LANGUAGE_2            &kp LANGUAGE_1  &kp N                   &kp M  &balanced_ht RIGHT_ALT COMMA  &lt 3 DOT  &balanced_ht RIGHT_CONTROL SLASH
 &kp LEFT_CONTROL        &kp LEFT_WIN  &kp ESCAPE      &mkp MB1  &kp SPACE  &lt_to_layer_0 2 TAB      &kp BACKSPACE   &lt_to_layer_0 1 ENTER                                             &to 5
             >;
 
@@ -133,16 +154,16 @@
         NUM_SYM {
             bindings = <
 &kp EXCLAMATION                   &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp PIPE          &kp EQUAL
-&hp_mod LEFT_SHIFT N1             &kp N2           &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE  &kp SEMICOLON     &kp TILDE
+&balanced_ht LEFT_SHIFT N1             &kp N2           &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE  &kp SEMICOLON     &kp TILDE
 &mt LEFT_CONTROL NUMBER_6         &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp SLASH
-&hp_mod LC(LEFT_SHIFT) KP_DIVIDE  &kp KP_MULTIPLY  &kp EQUAL     &mkp MB1      &kp SPACE     &kp TAB           &none      &trans                                                                           &none
+&balanced_ht LC(LEFT_SHIFT) KP_DIVIDE  &kp KP_MULTIPLY  &kp EQUAL     &mkp MB1      &kp SPACE     &kp TAB           &none      &trans                                                                           &none
             >;
         };
 
         FUNCTION {
             bindings = <
 &none                  &none         &none       &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-&hp_mod LEFT_SHIFT F1  &kp F2        &kp F3      &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
+&balanced_ht LEFT_SHIFT F1  &kp F2        &kp F3      &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
 &mt LEFT_CONTROL F6    &kp F7        &kp F8      &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
 &kp LEFT_CONTROL       &kp LEFT_WIN  &kp ESCAPE  &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
             >;
