@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 100
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -66,14 +67,18 @@
     };
 
     behaviors {
-// 新しいスクロール動作の追加
+        // 新しいスクロール動作の追加
+
         scroll_up_down: behavior_sensor_rotate_mouse_wheel_up_down {
             compatible = "zmk,behavior-sensor-rotate";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             // 追加: スクロールのタップ時間を設定 (20ms)
+
             tap-ms = <20>;
         };
+
         lt_to_layer_0: lt_to_layer_0 {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_TAP_TO_0";
@@ -95,7 +100,7 @@
 &kp LCTRL     &kp LEFT_ALT  &mt LEFT_GUI LEFT_SHIFT  &lt_to_layer_0 6 INT_HENKAN  &lt 4 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &lt 2 TAB      &lt 1 ENTER                             &kp BACKSPACE
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&scroll_up_down>;
         };
 
         FUNCTION_NUM {
