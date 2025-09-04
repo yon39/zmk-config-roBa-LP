@@ -95,8 +95,8 @@
         default_layer {
             bindings = <
 &mt ESCAPE Q  &kp W         &kp E                    &kp R                        &kp T                                                 &kp Y        &kp U  &kp I      &kp O    &kp P
-&kp A         &kp S         &kp D                    &kp F                        &kp G    &kp LS(LG(S))               &kp COLON        &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&kp Z         &kp X         &kp C                    &kp V                        &lt 6 B  &kp HOME                    &kp SLASH        &kp N        &kp M  &kp COMMA  &kp DOT  &kp EQUAL
+&kp A         &kp S         &kp D                    &kp F                        &kp G    &kp LS(LG(S))               &kp LS(SEMI)     &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&kp Z         &kp X         &kp C                    &kp V                        &lt 6 B  &kp HOME                    &kp SLASH        &kp N        &kp M  &kp COMMA  &kp DOT  &kp LS(MINUS)
 &kp LCTRL     &kp LEFT_ALT  &mt LEFT_GUI LEFT_SHIFT  &mt INT_HENKAN INT_MUHENKAN  &mo 4    &lt_to_layer_0 3 SPACE      &lt 2 BACKSPACE  &lt 1 ENTER                             &kp DEL
             >;
 
@@ -114,10 +114,10 @@
 
         NUM {
             bindings = <
-&kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH   &kp DOLLAR  &kp PERCENT                                  &kp INT_YEN       &kp AMPERSAND      &trans                &trans                 &trans
-&kp QUESTION     &trans             &kp TILDE  &trans      &kp ASTERISK  &trans         &kp LESS_THAN   &kp GREATER_THAN  &kp AT_SIGN        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SLASH
-&trans           &trans             &trans     &trans      &kp PLUS      &kp MINUS      &kp UNDERSCORE  &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE        &kp RIGHT_BRACE        &kp BACKSLASH
-&trans           &trans             &trans     &trans      &trans        &trans         &trans          &trans                                                                            &kp PIPE
+&kp EXCLAMATION  &kp LS(N2)  &kp HASH       &kp DOLLAR  &kp PERCENT                                          &kp INT_YEN       &kp LS(N6)             &trans                &trans                 &trans
+&kp QUESTION     &trans      &kp LS(EQUAL)  &trans      &kp LS(LEFT_BRACKET)  &trans         &kp LESS_THAN   &kp GREATER_THAN  &kp LEFT_BRACKET       &kp LS(N8)            &kp LEFT_PARENTHESIS   &kp KP_DIVIDE
+&trans           &trans      &trans         &trans      &kp LS(SEMI)          &kp MINUS      &kp LS(INT_RO)  &kp LS(AT_SIGN)   &kp LS(RIGHT_BRACKET)  &kp LS(LEFT_BRACKET)  &kp LS(RIGHT_BRACKET)  &kp BACKSLASH
+&trans           &trans      &trans         &trans      &trans                &trans         &trans          &trans                                                                                &kp LS(INT_YEN)
             >;
         };
 
