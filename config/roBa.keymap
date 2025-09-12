@@ -76,7 +76,7 @@
         GUID: GUID {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp S &kp O &kp K &kp U &kp N &kp O &kp N0 &kp N0 &kp N2>;
+            bindings = <&kp S &kp H &kp U &kp N &kp DOT &kp S &kp DOT &kp O &kp K &kp U &kp N &kp O &kp AT &kp P &kp W &kp C &kp DOT &kp C &kp O &kp M>;
             label = "GUID";
         };
 
