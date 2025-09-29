@@ -47,7 +47,7 @@
 &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH              &kp DOLLAR             &kp PERCENT                                 &trans  &trans  &trans  &trans  &trans
 &kp AMPERSAND    &kp SINGLE_QUOTE   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp AT_SIGN  &kp LEFT_BRACKET       &trans  &trans  &trans  &trans  &trans  &trans
 &kp CARET        &kp TILDE          &kp PIPE              &kp SEMICOLON          &kp COLON    &kp RIGHT_BRACKET      &trans  &trans  &trans  &trans  &trans  &trans
-&kp INT_YEN      &sk SLASH          &trans                &trans                 &trans       &trans                 &trans  &trans                          &trans
+&kp INT_YEN      &kp SLASH          &trans                &trans                 &trans       &trans                 &trans  &trans                          &trans
             >;
         };
 
