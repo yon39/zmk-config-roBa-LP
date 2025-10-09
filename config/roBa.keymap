@@ -85,10 +85,10 @@
 
         CMDSCROLL {
             bindings = <
-&kp LG(Q)      &kp LG(W)             &kp LG(T)              &kp LG(A)             &kp LG(X)                                         &trans  &trans  &trans  &trans  &trans
-&mkp MB5       &kp LG(UP_ARROW)      &kp LG(DOWN_ARROW)     &kp LG(C)             &kp LG(V)       &kp LG(LA(V))             &trans  &trans  &trans  &trans  &trans  &trans
-&kp LS(LG(C))  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(Z)             &kp LG(Y)       &kp LG(LS(Z))             &trans  &trans  &trans  &trans  &trans  &trans
-&trans         &trans                &trans                 &kp LG(LS(NUMBER_4))  &kp LG(LS(N5))  &kp LG(LS(NUMBER_3))      &trans  &trans                          &trans
+&kp LG(Q)      &kp LG(W)  &kp LG(T)             &kp LG(A)              &kp LG(X)                                         &trans  &trans  &trans  &trans  &trans
+&mkp MB5       &kp LG(C)  &kp LG(UP_ARROW)      &kp LG(DOWN_ARROW)     &kp LG(V)       &kp LG(LA(V))             &trans  &trans  &trans  &trans  &trans  &trans
+&kp LS(LG(C))  &kp LG(Z)  &kp LG(LEFT_BRACKET)  &kp LG(RIGHT_BRACKET)  &kp LG(Y)       &kp LG(LS(Z))             &trans  &trans  &trans  &trans  &trans  &trans
+&trans         &trans     &trans                &kp LG(LS(NUMBER_4))   &kp LG(LS(N5))  &kp LG(LS(NUMBER_3))      &trans  &trans                          &trans
             >;
         };
 
