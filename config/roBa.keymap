@@ -42,11 +42,6 @@
             key-positions = <12 13>;
         };
 
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
         comma {
             bindings = <&kp COMMA>;
             key-positions = <30 31>;
