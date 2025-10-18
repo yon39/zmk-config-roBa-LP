@@ -5,6 +5,9 @@
 
 #define ZMK_MOUSE_POINTING_SCRL_VAL 100
 
+CONFIG_ZMK_POINTING_REVERSE_SCROLL_X=y
+CONFIG_ZMK_POINTING_REVERSE_SCROLL_Y=y
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
