@@ -94,10 +94,10 @@
 
         default_layer {
             bindings = <
-&mt ESCAPE Q      &kp W         &kp E         &kp R  &kp T                                        &kp Y      &kp U  &kp I      &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F  &kp G    &kp LS(LG(S))      &kp QUESTION     &kp H      &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V  &lt 6 B  &kp SPACE          &kp EXCLAMATION  &kp N      &kp M  &kp COMMA  &kp DOT  &kp LS(MINUS)
-&kp LCTRL         &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2    &mo 1              &kp BACKSPACE    &kp ENTER                             &kp DEL
+&mt ESCAPE Q  &kp W         &kp E         &kp R  &kp T                                        &kp Y      &kp U  &kp I      &kp O    &kp P
+&kp A         &kp S         &kp D         &kp F  &kp G    &kp LS(LG(S))      &kp QUESTION     &kp H      &kp J  &kp K      &kp L    &kp MINUS
+&kp Z         &kp X         &kp C         &kp V  &lt 6 B  &kp SPACE          &kp EXCLAMATION  &kp N      &kp M  &kp COMMA  &kp DOT  &kp RIGHT_SHIFT
+&kp LCTRL     &kp LEFT_ALT  &kp LEFT_GUI  &mo 3  &mo 2    &mo 1              &kp BACKSPACE    &kp ENTER                             &kp DEL
             >;
 
             sensor-bindings = <&scroll_up_down>;
@@ -105,19 +105,19 @@
 
         FUNCTION_NUM {
             bindings = <
-&kp N7        &kp N8        &kp N9        &trans  &trans                      &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
-&kp N4        &kp N5        &kp NUMBER_6  &trans  &trans  &trans      &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
-&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans  &trans      &trans  &kp F11  &kp F12  &trans  &trans  &trans
-&kp N0        &trans        &trans        &trans  &trans  &trans      &trans  &trans                            &trans
+&kp N7        &kp N8        &kp N9        &kp LS(SEMI)   &kp MINUS                         &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+&kp N4        &kp N5        &kp NUMBER_6  &kp LS(APOS)   &kp KP_SLASH  &trans      &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp LS(MINUS)  &trans        &trans      &trans  &kp F11  &kp F12  &trans  &trans  &trans
+&kp N0        &trans        &trans        &trans         &trans        &trans      &trans  &trans                            &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp PLUS     &kp LS(N2)  &kp HASH       &kp DOLLAR    &kp PERCENT                                        &kp INT_YEN        &kp LS(N6)        &trans                 &trans                &trans
-&kp KP_PLUS  &trans      &kp LS(EQUAL)  &kp INT_YEN   &kp LS(APOSTROPHE)  &trans         &kp LESS_THAN   &kp GREATER_THAN   &kp LEFT_BRACKET  &kp LS(N8)             &kp LEFT_PARENTHESIS  &kp KP_DIVIDE
-&trans       &trans      &trans         &kp KP_SLASH  &kp LS(SEMI)        &kp MINUS      &kp LS(INT_RO)  &kp RIGHT_BRACKET  &kp NON_US_HASH   &kp LS(RIGHT_BRACKET)  &kp LS(NON_US_HASH)   &kp BACKSLASH
-&trans       &trans      &trans         &trans        &trans              &trans         &trans          &trans                                                                            &kp LS(INT_YEN)
+&trans  &kp LS(N2)  &kp HASH       &kp DOLLAR  &kp PERCENT                              &kp INT_YEN        &kp LS(N6)        &trans                 &trans                &trans
+&trans  &trans      &kp LS(EQUAL)  &trans      &trans       &trans      &kp LESS_THAN   &kp GREATER_THAN   &kp LEFT_BRACKET  &kp LS(N8)             &kp LEFT_PARENTHESIS  &trans
+&trans  &trans      &trans         &trans      &trans       &trans      &kp LS(INT_RO)  &kp RIGHT_BRACKET  &kp NON_US_HASH   &kp LS(RIGHT_BRACKET)  &kp LS(NON_US_HASH)   &trans
+&trans  &trans      &trans         &trans      &trans       &trans      &trans          &trans                                                                            &kp LS(INT_YEN)
             >;
         };
 
