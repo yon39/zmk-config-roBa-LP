@@ -4,29 +4,29 @@
 #include <dt-bindings/zmk/pointing.h>
 
 // Copied from https://github.com/kureyakey/zmk-config-zonkey/blob/main/config/zonkey.keymap
-#define JP_DQUOTE       AT                // "
-#define JP_AMPERSAND    CARET             // &
-#define JP_SQUOTE       AMPERSAND         // '
-#define JP_EQUAL        UNDER             // =
-#define JP_CARET        EQUAL             // ^
-#define JP_YEN          0x89              // ¥
-#define JP_PLUS         COLON             // +
-#define JP_TILDE        PLUS              // ~
-#define JP_PIPE         LS(0x89)          // |
-#define JP_AT           LEFT_BRACKET      // @
-#define JP_COLON        SINGLE_QUOTE      // :
-#define JP_ASTERISK     DOUBLE_QUOTES     // *
-#define JP_BACKQUOTE    LEFT_BRACE        // `
-#define JP_UNDERSCORE   LS(0x87)          // _
-#define JP_LBRACKET     RIGHT_BRACKET     // [
-#define JP_RBRACKET     BACKSLASH         // ]
-#define JP_LPAREN       ASTERISK          // (
-#define JP_RPAREN       LEFT_PARENTHESIS  // )
-#define JP_LBRACE       RIGHT_BRACE       // {
-#define JP_RBRACE       PIPE              // }
+// #define JP_DQUOTE       AT                // "
+// #define JP_AMPERSAND    CARET             // &
+// #define JP_SQUOTE       AMPERSAND         // '
+// #define JP_EQUAL        UNDER             // =
+// #define JP_CARET        EQUAL             // ^
+// #define JP_YEN          0x89              // ¥
+// #define JP_PLUS         COLON             // +
+// #define JP_TILDE        PLUS              // ~
+// #define JP_PIPE         LS(0x89)          // |
+// #define JP_AT           LEFT_BRACKET      // @
+// #define JP_COLON        SINGLE_QUOTE      // :
+// #define JP_ASTERISK     DOUBLE_QUOTES     // *
+// #define JP_BACKQUOTE    LEFT_BRACE        // `
+// #define JP_UNDERSCORE   LS(0x87)          // _
+// #define JP_LBRACKET     RIGHT_BRACKET     // [
+// #define JP_RBRACKET     BACKSLASH         // ]
+// #define JP_LPAREN       ASTERISK          // (
+// #define JP_RPAREN       LEFT_PARENTHESIS  // )
+// #define JP_LBRACE       RIGHT_BRACE       // {
+// #define JP_RBRACE       PIPE              // }
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
-#define JP_BSLH         INT1              // (backslash)
+// #define JP_BSLH         INT1              // (backslash)
 
 // #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
@@ -58,7 +58,7 @@
     mo2: mo2 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N2>, <&kp JP_DQUOTE>;
+        bindings = <&kp N2>, <&kp DOUBLE_QUOTES>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -66,7 +66,7 @@
     mo6: mo6 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N6>, <&kp JP_AMPERSAND>;
+        bindings = <&kp N6>, <&kp AMPERSAND>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -74,7 +74,7 @@
     mo7: mo7 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N7>, <&kp JP_SQUOTE>;
+        bindings = <&kp N7>, <&kp SINGLE_QUOTE>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -82,7 +82,7 @@
     mo8: mo8 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N8>, <&kp JP_LPAREN>;
+        bindings = <&kp N8>, <&kp LEFT_PARENTHESIS>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -90,7 +90,7 @@
     mo9: mo9 {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp N9>, <&kp JP_RPAREN>;
+        bindings = <&kp N9>, <&kp RIGHT_PARENTHESIS>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -106,7 +106,7 @@
     moA: moA {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp MINUS>, <&kp JP_EQUAL>;
+        bindings = <&kp MINUS>, <&kp EQUAL>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -114,7 +114,7 @@
     moB: moB {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp JP_CARET>, <&kp JP_TILDE>;
+        bindings = <&kp CARET>, <&kp TILDE>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -122,7 +122,7 @@
     moC: moC {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp JP_YEN>, <&kp JP_PIPE>;
+        bindings = <&kp AT>, <&kp GRAVE>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -130,7 +130,7 @@
     moD: moD {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp JP_AT>, <&kp JP_BACKQUOTE>;
+        bindings = <&kp SEMI>, <&kp PLUS>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -138,31 +138,7 @@
     moE: moE {
         compatible = "zmk,behavior-mod-morph";
         #binding-cells = <0>;
-        bindings = <&kp JP_LBRACKET>, <&kp JP_LBRACE>;
-
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    moF: moF {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp SEMI>, <&kp JP_PLUS>;
-
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    moG: moG {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp JP_COLON>, <&kp JP_ASTERISK>;
-
-        mods = <(MOD_LSFT|MOD_RSFT)>;
-    };
-
-    moH: moH {
-        compatible = "zmk,behavior-mod-morph";
-        #binding-cells = <0>;
-        bindings = <&kp JP_RBRACKET>, <&kp JP_RBRACE>;
+        bindings = <&kp COLON>, <&kp ASTERISK>;
 
         mods = <(MOD_LSFT|MOD_RSFT)>;
     };
@@ -206,7 +182,7 @@
 &kp Q             &kp W      &kp E         &kp R                     &kp T                                                     &kp Y        &kp U  &lt 5 I    &kp O    &kp P
 &kp A             &kp S      &kp D         &kp F                     &kp G        &none                         &kp ESCAPE     &kp H        &kp J  &kp K      &kp L    &none
 &mt LEFT_SHIFT Z  &kp X      &kp C         &kp V                     &kp B        &kp COLON                     &kp RMETA      &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&kp LCTRL         &kp LMETA  &kp LEFT_ALT  &lt_to_layer_0 1 JP_EISU  &lt 2 SPACE  &lt_to_layer_0 3 JP_KANA      &kp BACKSPACE  &lt 1 ENTER                             &kp JP_UNDERSCORE
+&kp LCTRL         &kp LMETA  &kp LEFT_ALT  &lt_to_layer_0 1 JP_EISU  &lt 2 SPACE  &lt_to_layer_0 3 JP_KANA      &kp BACKSPACE  &lt 1 ENTER                             &kp UNDERSCORE
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -223,9 +199,9 @@
 
         L2_SYM {
             bindings = <
-&trans          &trans  &trans  &trans  &trans                      &trans           &trans         &moA           &moB  &moC
-&trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans           &kp JP_LPAREN  &kp JP_RPAREN  &moD  &moE
-&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans           &trans         &moF           &moG  &moH
+&trans          &trans  &trans  &trans  &trans                      &trans           &trans    &moA      &moB  &kp BACKSLASH
+&trans          &trans  &trans  &trans  &trans  &trans      &trans  &trans           &kp LPAR  &kp RPAR  &moC  &kp LEFT_BRACKET
+&kp LEFT_SHIFT  &trans  &trans  &trans  &trans  &trans      &trans  &trans           &trans    &moD      &moE  &kp RIGHT_BRACKET
 &trans          &trans  &trans  &trans  &trans  &trans      &trans  &kp RIGHT_SHIFT                                      &trans
             >;
         };
