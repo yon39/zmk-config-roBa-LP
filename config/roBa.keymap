@@ -4,6 +4,7 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
+#CONFIG_PMW3610_AUTOMOUSE_TIMEOUT_MS=700
 
 &mt {
     flavor = "balanced";
