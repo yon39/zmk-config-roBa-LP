@@ -242,7 +242,7 @@
             bindings = <
 &kp Q      &kp W      &kp E         &kp R       &kp T                                     &kp LS(F1)  &kp LS(F2)  &kp LS(F3)  &kp LS(F4)  &kp LS(F5)
 &kp A      &kp S      &kp D         &kp F       &kp G      &kp F12         &tog 7         &kp LS(F6)  &kp LS(F7)  &kp LS(F8)  &kp RS(F1)  &kp RS(F2)
-&kp Z      &kp X      &kp C         &kp V       &kp B      &kp END         &kp H          &kp RS(F3)  &kp RS(F4)  &kp RS(F5)  &kp RS(F6)  &kp RS(F7)
+&kp Z      &kp X      &kp C         &kp V       &kp B      &kp END         &mkp LCLK      &kp RS(F3)  &kp RS(F4)  &kp RS(F5)  &kp RS(F6)  &kp RS(F7)
 &kp LCTRL  &kp LC(N)  &kp LEFT_ALT  &kp LSHIFT  &kp SPACE  &kp ESCAPE      &kp BACKSPACE  &kp ENTER                                       &kp RS(F8)
             >;
 
