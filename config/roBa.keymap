@@ -33,7 +33,17 @@
     flavor = "balanced";
     quick-tap-ms = <0>;
 };
-
+&zip_temp_layer {
+    excluded-positions = <
+        17 // H
+        18 // J
+        19 // K
+        20 // l
+        21 // ;
+        22 // z
+        33 // /
+    >;
+};
 &trackball_listener {
     input-processors = <&zip_temp_layer 4 15000>;
 };
