@@ -26,7 +26,6 @@
 #define JP_KANA         LANGUAGE_1        // かな
 #define JP_EISU         LANGUAGE_2        // 英数
 #define JP_HANZEN       GRAVE             // 半角/全角
-
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
 &mt {
@@ -45,7 +44,6 @@
     //         <&kp LEFT_ARROW>,
     //         <&kp UP_ARROW>,
     //         <&kp DOWN_ARROW>;
-
     //     tick = <10>;
     //     wait-ms = <5>;
     //     tap-ms = <5>;
@@ -97,6 +95,7 @@
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_DOWN>, <&msc SCRL_UP>;
+
             tap-ms = <20>;
         };
 
@@ -115,10 +114,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                        &kp T                                                          &kp Y        &kp U  &lt 5 I    &kp O    &kp P
-&kp A             &kp S         &kp D         &kp F                        &kp G        &kp LS(LG(S))                      &kp MINUS      &kp H        &kp J  &kp K      &kp L    &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                        &kp B        &kp COLON                          &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 INT_MUHENKAN      &kp BACKSPACE  &lt 1 ENTER                             &kp DEL
+&kp SEMICOLON     &kp C         &kp U         &kp Y                        &kp P                                                 &kp V        &kp D  &lt 5 H  &kp G  &kp J
+&mt LCTRL A       &kp O         &kp E         &kp I                        &kp PERIOD   &kp LS(LG(S))             &tog 7         &kp K        &kp T  &kp N    &kp S  &kp R
+&mt LEFT_SHIFT Q  &kp X         &kp COMMA     &kp Z                        &kp MINUS    &kp SLASH                 &kp APOS       &kp F        &kp W  &kp M    &kp L  &mt RIGHT_SHIFT B
+&mt RCTRL LC(V)   &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 6 INT_HENKAN  &lt 2 SPACE  &lt_to_layer_0 3 TAB      &kp BACKSPACE  &lt 1 ENTER                         &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -180,6 +179,17 @@
 &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
 &trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
+        };
+
+        game {
+            bindings = <
+&kp Q      &kp W      &kp E         &kp R       &kp T                                     &kp LS(F1)  &kp LS(F2)  &kp LS(F3)  &kp LS(F4)  &kp LS(F5)
+&kp A      &kp S      &kp D         &kp F       &kp G      &kp F12         &tog 0         &kp LS(F6)  &kp LS(F7)  &kp LS(F8)  &kp RS(F1)  &kp RS(F2)
+&kp Z      &kp X      &kp C         &kp V       &kp B      &kp END         &kp H          &kp RS(F3)  &kp RS(F4)  &kp RS(F5)  &kp RS(F6)  &kp RS(F7)
+&kp LCTRL  &kp LC(N)  &kp LEFT_ALT  &kp LSHIFT  &kp SPACE  &kp ESCAPE      &kp BACKSPACE  &kp ENTER                                       &kp RS(F8)
+            >;
+
+            sensor-bindings = <&encoder_msc_down_up>;
         };
     };
 };
