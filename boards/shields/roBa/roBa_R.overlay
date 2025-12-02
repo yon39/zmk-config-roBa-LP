@@ -14,12 +14,15 @@
             ;
 };
 
+#inclue <input/processors.dtsi>
 / {
-    trackball_listener {    
-    //trackball_listener: trackball_listener {
-        status = "okay";
+    //trackball_listener {    
+    trackball_listener: trackball_listener {
+        //status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        input-processors = <&zip_temp_layer 4 10000>;
     };
 };
 
