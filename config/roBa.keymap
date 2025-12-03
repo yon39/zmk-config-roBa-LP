@@ -99,6 +99,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <24 25>;
         };
+
+        nobasi {
+            bindings = <&kp MINUS>;
+            key-positions = <19 7>;
+        };
     };
 
     macros {
@@ -171,10 +176,10 @@
 
         default_layer {
             bindings = <
-&kp SEMICOLON     &kp C         &kp U         &kp Y                        &kp Z                                                          &kp V        &kp D  &lt 5 H  &kp G  &kp J
-&mt LCTRL A       &kp O         &kp E         &kp I                        &kp PERIOD   &kp LS(LG(S))                      &tog 1         &kp K        &kp T  &kp N    &kp S  &kp R
-&mt LEFT_SHIFT Q  &kp X         &kp COMMA     &kp P                        &kp MINUS    &kp SLASH                          &kp APOS       &kp F        &kp W  &kp M    &kp B  &mt RIGHT_SHIFT L
-&mt RCTRL LC(V)   &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 7 INT_HENKAN  &lt 3 SPACE  &lt_to_layer_0 2 INT_MUHENKAN      &kp BACKSPACE  &lt 2 ENTER                         &kp DEL
+&kp MINUS         &kp C         &kp U          &kp Y                        &kp Z                                                          &kp V        &kp D  &lt 5 H  &kp G  &kp J
+&mt LCTRL A       &kp O         &kp E          &kp I                        &kp PERIOD   &kp LS(LG(S))                      &tog 1         &kp K        &kp T  &kp N    &kp S  &kp R
+&mt LEFT_SHIFT Q  &kp X         &kp SEMICOLON  &kp P                        &kp COMMA    &kp SLASH                          &kp APOS       &kp W        &kp M  &kp F    &kp B  &mt RIGHT_SHIFT L
+&mt RCTRL LC(V)   &kp LEFT_WIN  &kp LEFT_ALT   &lt_to_layer_0 7 INT_HENKAN  &lt 3 SPACE  &lt_to_layer_0 2 INT_MUHENKAN      &kp BACKSPACE  &lt 2 ENTER                         &kp DEL
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
