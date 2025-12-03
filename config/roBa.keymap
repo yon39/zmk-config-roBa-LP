@@ -128,6 +128,20 @@
             bindings = <&none>;
             label = "TOIPHONE";
         };
+
+        JRAticketSmartsheet2: JTAticketSmartsheet {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp LEFT_SHIFT &kp ENTER &kp TAB &kp TAB &kp ENTER>;
+            label = "JTATICKETSMARTSHEET";
+        };
+
+        JRAticketSmartsheet1: JRAticketSmartsheet1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp TAB &kp LEFT_SHIFT &kp ENTER &kp TAB &kp ENTER>;
+            label = "JRATICKETSMARTSHEET1";
+        };
     };
 
     behaviors {
@@ -173,10 +187,10 @@
 
         ARROW {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)    &kp LS(NUMBER_3)  &kp LS(NUMBER_4)     &kp LS(N5)                               &kp LS(NUMBER_6)  &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
-&kp HOME          &kp LA(LEFT_ARROW)  &kp UP_ARROW      &kp LA(RIGHT_ARROW)  &kp END     &GUID            &kp DELETE  &kp MINUS         &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp LEFT_SHIFT    &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans      &pwcpass         &kp SEMI    &kp LS(MINUS)     &kp LS(EQUAL)     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(BACKSLASH)
-&trans            &trans              &trans            &trans               &trans      &lt 6 ENTER      &trans      &trans                                                                   &kp LS(INT_RO)
+&kp LS(NUMBER_1)  &kp LS(NUMBER_2)    &kp LS(NUMBER_3)  &kp LS(NUMBER_4)     &kp LS(N5)                                          &kp LS(NUMBER_6)       &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
+&kp HOME          &kp LA(LEFT_ARROW)  &kp UP_ARROW      &kp LA(RIGHT_ARROW)  &kp END     &GUID            &kp DELETE             &kp MINUS              &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp LEFT_SHIFT    &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans      &pwcpass         &kp SEMI               &kp LS(MINUS)          &kp LS(EQUAL)     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(BACKSLASH)
+&trans            &trans              &trans            &trans               &trans      &lt 6 ENTER      &JRAticketSmartsheet1  &JRAticketSmartsheet2                                                         &kp LS(INT_RO)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
