@@ -101,7 +101,7 @@
         ARROW {
             bindings = <
 &kp ESCAPE        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)                                         &kp PAGE_UP    &trans    &trans          &trans     &kp DEL
-&kp TAB           &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N8)        &kp LC(LA(KP_NUMBER_0))      &kp HOME  &kp PAGE_DOWN  &trans    &kp UP_ARROW    &trans     &kp LANG_ZENKAKUHANKAKU
+&kp TAB           &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N8)        &kp LC(LA(KP_NUMBER_0))      &kp HOME  &kp PAGE_DOWN  &trans    &kp UP_ARROW    &trans     &kp INT_HENKAN
 &kp LEFT_SHIFT    &kp LS(N9)        &kp LS(N0)        &kp UNDER         &kp TILDE         &kp EQUAL                    &kp END   &trans         &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
 &kp LEFT_CONTROL  &trans            &trans            &trans            &trans            &trans                       &trans    &trans                                              &kp RSHFT
             >;
