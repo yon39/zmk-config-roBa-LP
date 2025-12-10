@@ -204,15 +204,15 @@
 &trans          &trans                  &trans        &trans                   &trans      &trans      &trans   &trans                                      &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
+            sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
         };
 
         NUM {
             bindings = <
-&kp COLON                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS                                                   &kp JP_CARET         &kp JP_AMPERSAND      &kp JP_TILDE       &kp JP_LPAREN  &kp JP_RPAREN
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp JP_UNDERSCORE  &kp EXCLAMATION   &kp JP_AT        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp JP_EQUAL                    &trans          &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_LBRACE  &kp JP_RBRACE       &kp JP_YEN
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp JP_PIPE
+&kp COLON                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp JP_PLUS                                                      &kp JP_CARET     &kp JP_AMPERSAND  &kp JP_TILDE   &kp JP_LPAREN  &kp JP_RPAREN
+&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp JP_ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp JP_UNDERSCORE  &kp EXCLAMATION  &kp JP_AT         &kp HASH       &kp DOLLAR     &kp PERCENT
+&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD       &kp JP_EQUAL                 &trans             &kp JP_LBRACKET  &kp JP_RBRACKET   &kp JP_LBRACE  &kp JP_RBRACE  &kp JP_YEN
+&trans                      &trans           &trans           &trans           &trans           &trans                       &trans             &trans                                                           &kp JP_PIPE
             >;
         };
 
