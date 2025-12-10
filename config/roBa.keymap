@@ -56,7 +56,7 @@
 &kp Q      &kp W         &kp E         &kp R                &kp T                                                  &kp Y      &kp U  &kp I      &kp O    &kp P
 &kp A      &kp S         &kp D         &kp F                &kp G       &kp LS(LG(S))               &kp MINUS      &kp H      &kp J  &kp K      &kp L    &kp ENTER
 &kp Z      &kp X         &kp C         &kp V                &kp B       &kp UNDERSCORE              &kp SEMICOLON  &kp N      &kp M  &kp COMMA  &kp DOT  &kp LS(QUESTION)
-&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 RIGHT_BRACKET  &lt 3 BSLH  &lt_to_layer_0 5 COLON      &lt 1 MINUS    &kp SPACE                             &kp RSHIFT
+&kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &lt 2 RIGHT_BRACKET  &lt 3 BSLH  &lt_to_layer_0 5 MINUS      &lt 1 SPACE    &kp SPACE                             &kp RSHIFT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -75,7 +75,7 @@
             bindings = <
 &kp ESCAPE        &kp LS(NUMBER_1)  &kp LS(NUMBER_2)  &kp LS(NUMBER_3)  &kp LS(NUMBER_4)                                         &kp PAGE_UP    &trans    &trans          &trans     &kp DEL
 &kp TAB           &kp LS(N5)        &kp LS(NUMBER_6)  &kp LS(N7)        &kp LS(N8)        &kp LC(LA(KP_NUMBER_0))      &kp HOME  &kp PAGE_DOWN  &trans    &kp UP_ARROW    &trans     &kp LANGUAGE_2
-&kp LEFT_SHIFT    &kp LS(N9)        &kp LS(N0)        &kp UNDERSCORE    &kp UNDERSCORE    &kp EQUAL                    &kp END   &trans         &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
+&kp LEFT_SHIFT    &kp LS(N9)        &kp LS(N0)        &kp MINUS         &kp EQUAL         &kp UNDERSCORE               &kp END   &trans         &kp LEFT  &kp DOWN_ARROW  &kp RIGHT  &trans
 &kp LEFT_CONTROL  &trans            &trans            &none             &none             &none                        &trans    &trans                                              &kp RSHFT
             >;
 
