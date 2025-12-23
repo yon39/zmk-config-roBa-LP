@@ -10,6 +10,7 @@
 
 &trackball {
     //automouse-layer = <4>;
+
     scroll-layers = <5>;
 
     // arrows {
@@ -83,12 +84,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        default-mac {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R           &kp T                                           &kp Y          &kp U    &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F           &kp G        &kp LS(LG(S))       &kp MINUS      &kp H          &lt 5 J  &kp K     &kp L     &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V           &kp B        &kp COLON           &kp SEMICOLON  &kp N          &kp M    &mkp MB1  &mkp MB2  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp LANGUAGE_2  &lt 2 SPACE  &kp LANGUAGE_1      &kp ENTER      &kp BACKSPACE                               &mkp MB3
+&kp Q             &kp W         &kp E         &kp R           &kp T                                            &kp Y          &kp U    &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F           &kp G        &kp LS(LG(S))       &kp MINUS       &kp H          &lt 5 J  &kp K     &kp L     &kp SQT
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V           &kp B        &kp LANGUAGE_2      &kp LANGUAGE_1  &kp N          &kp M    &mkp MB1  &mkp MB2  &kp SLASH
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp LANGUAGE_2  &lt 2 SPACE  &kp LANGUAGE_1      &kp ENTER       &kp BACKSPACE                               &mkp MB3
             >;
 
             sensor-bindings = <&inc_dec_kp PAGE_DOWN PAGE_UP>;
