@@ -76,10 +76,10 @@
 
         default {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R          &kp T                                                    &kp Y      &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F          &kp G        &lt 4 LG(LS(N4))        &kp MINUS           &kp H      &kp J  &lt 5 K   &kp L     &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B        &kp LANGUAGE_2          &kp LANGUAGE_1      &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 1 SPACE  &lt 1 LC(UP_ARROW)      &lt 2 LC(UP_ARROW)  &kp ENTER                             &mkp MB3
+&kp Q             &kp W             &kp E         &kp R          &kp T                                                    &kp Y      &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S             &kp D         &kp F          &kp G        &lt 4 LG(LS(N4))        &kp MINUS           &kp H      &kp J  &lt 5 K   &kp L     &kp MINUS
+&mt LEFT_SHIFT Z  &kp X             &kp C         &kp V          &kp B        &kp LANGUAGE_2          &kp LANGUAGE_1      &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
+&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &kp BACKSPACE  &lt 1 SPACE  &lt 1 LC(UP_ARROW)      &lt 2 LC(UP_ARROW)  &kp ENTER                             &mkp MB3
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -87,24 +87,24 @@
 
         NumberArrow {
             bindings = <
-&kp N1        &kp N2        &kp N3    &kp N4                &kp N5                              &kp N6     &kp N7                 &kp N8    &kp N9     &kp N0
-&trans        &kp LEFT      &kp UP    &kp RIGHT             &kp MINUS       &trans      &trans  &kp EQUAL  &kp LEFT               &kp UP    &kp RIGHT  &trans
-&kp ASTERISK  &kp ASTERISK  &kp DOWN  &kp LEFT_PARENTHESIS  &kp UNDERSCORE  &trans      &trans  &kp PLUS   &kp RIGHT_PARENTHESIS  &kp DOWN  &kp SLASH  &kp FSLH
-&trans        &trans        &trans    &trans                &trans          &trans      &trans  &trans                                                 &trans
+&kp N1        &kp N2         &kp N3    &kp N4                &kp N5                                  &kp N6     &kp N7                 &kp N8    &kp N9            &kp N0
+&kp TAB       &kp LEFT       &kp UP    &kp RIGHT             &kp MINUS       &kp C_MUTE      &trans  &kp EQUAL  &kp LEFT               &kp UP    &kp RIGHT         &kp LS(TAB)
+&kp ASTERISK  &kp LESS_THAN  &kp DOWN  &kp LEFT_PARENTHESIS  &kp UNDERSCORE  &trans          &trans  &kp PLUS   &kp RIGHT_PARENTHESIS  &kp DOWN  &kp GREATER_THAN  &kp FSLH
+&trans        &trans         &trans    &trans                &trans          &trans          &trans  &trans                                                        &trans
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
-        ARROW {
+        Symbols {
             bindings = <
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp EXCLAMATION  &kp AT_SIGN     &kp HASH          &kp DOLLAR            &kp PERCENT                                &kp CARET          &kp AMPERSAND          &kp ASTERISK       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp TILDE        &kp LEFT_BRACE  &kp LEFT_BRACKET  &kp LEFT_PARENTHESIS  &kp SQT            &kp C_MUTE      &trans  &kp SQT            &kp RIGHT_PARENTHESIS  &kp RIGHT_BRACKET  &kp RIGHT_BRACE       &kp NON_US_BACKSLASH
+&kp GRAVE        &trans          &trans            &trans                &kp DOUBLE_QUOTES  &trans          &trans  &kp DOUBLE_QUOTES  &trans                 &kp COMMA          &kp DOT               &kp PIPE
+&trans           &trans          &trans            &trans                &trans             &trans          &trans  &trans                                                                             &trans
             >;
 
-            sensor-bindings = <&encoder_msc_down_up>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         NotYet {
