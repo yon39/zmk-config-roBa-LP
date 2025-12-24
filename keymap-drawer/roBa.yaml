@@ -40,8 +40,8 @@ layers:
   - LEFT ALT
   - BACKSPACE
   - {t: SPACE, h: NumberArrow}
-  - {t: F3, h: NumberArrow}
-  - ''
+  - {t: Ctl+UP ARROW, h: NumberArrow}
+  - {t: Ctl+UP ARROW, h: ARROW}
   - ENTER
   - '&mkp MB3'
   NumberArrow:
@@ -129,7 +129,7 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   NotYet:
