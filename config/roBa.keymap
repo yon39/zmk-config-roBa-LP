@@ -15,6 +15,8 @@
 &trackball {
     //automouse-layer = <4>;
 
+    scroll-layer = <5>;
+
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -32,9 +34,7 @@
     scroller {
         layers = <5>;
         input-processors = <
-            &zip_y_scaler 2
-            &zip_xy_to_scroll_mapper 
-            &zip_scroll_transform INPUT_TRANSFORM_X_INVERT
+            &zip_scroll_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_SCALE)
         >;
     };
 };
