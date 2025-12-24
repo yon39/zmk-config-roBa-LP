@@ -91,7 +91,7 @@
 &kp Q             &kp W             &kp E         &kp R      &kp T                                                     &kp Y             &kp U  &kp I     &kp O     &kp P
 &kp A             &kp S             &kp D         &kp F      &kp G             &lt 4 LG(LS(N4))      &kp TAB           &kp H             &kp J  &lt 5 K   &kp L     &kp MINUS
 &mt LEFT_SHIFT Z  &kp X             &kp C         &kp V      &kp B             &trans                &trans            &kp N             &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 1 TAB  &lt 2 LANGUAGE_2  &kp LC(UP_ARROW)      &kp LC(UP_ARROW)  &lt 3 LANGUAGE_1                             &mkp MB3
+&kp LEFT_COMMAND  &kp LEFT_CONTROL  &kp LEFT_ALT  &lt 2 TAB  &lt 3 LANGUAGE_2  &kp LC(UP_ARROW)      &kp LC(UP_ARROW)  &lt 1 LANGUAGE_1                             &mkp MB3
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
