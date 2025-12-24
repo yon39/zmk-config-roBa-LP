@@ -1,9 +1,9 @@
+#include <input/processors.dtsi>
+#include <dt-bindings/zmk/input_transform.h>
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>
-#include <dt-bindings/zmk/input_transform.h>
 
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 80
 
@@ -14,9 +14,7 @@
 
 &trackball {
     //automouse-layer = <4>;
-
     //scroll-layer = <5>;
-
     // arrows {
     //     layers = <3>;
     //     bindings =
@@ -42,39 +40,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        combo_eisuu {
-            bindings = <&kp LANGUAGE_2>;
-            key-positions = <24 25>;
-        };
-
-        combo_kana {
-            bindings = <&kp LANGUAGE_1>;
-            key-positions = <30 31>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -94,11 +60,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
         encoder_msc_down_up: encoder_msc_down_up {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ENCODER_MSC_DOWN_UP";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+
             tap-ms = <20>;
         };
     };
@@ -106,43 +74,23 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default-mac {
+        default {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R          &kp T                                              &kp Y      &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F          &kp G        &lt 7 LG(LS(N4))      &kp MINUS       &kp H      &kp J  &lt 5 K   &kp L     &kp SQT
+&kp A             &kp S         &kp D         &kp F          &kp G        &lt 4 LG(LS(N4))      &kp MINUS       &kp H      &kp J  &lt 5 K   &kp L     &kp MINUS
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B        &kp LANGUAGE_2        &kp LANGUAGE_1  &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 3 SPACE  &none                 &none           &kp ENTER                             &mkp MB3
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 1 SPACE  &lt 1 F3              &none           &kp ENTER                             &mkp MB3
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
         };
 
-        default-ipad {
+        NumberArrow {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R          &kp T                                              &kp Y      &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F          &kp G        &lt 7 LS(LG(N4))      &kp MINUS       &kp H      &kp J  &lt 5 K   &kp L     &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B        &kp LANGUAGE_2        &kp LANGUAGE_1  &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 3 SPACE  &none                 &none           &kp ENTER                             &mkp MB3
-            >;
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        default-windows-ubuntu {
-            bindings = <
-&kp Q             &kp W         &kp E         &kp R          &kp T                                              &kp Y      &kp U  &kp I     &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F          &kp G        &lt 7 LS(LG(N4))      &kp MINUS       &kp H      &kp J  &lt 5 K   &kp L     &kp SQT
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V          &kp B        &kp LANGUAGE_2        &kp LANGUAGE_1  &kp N      &kp M  &mkp MB1  &mkp MB2  &kp SLASH
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &kp BACKSPACE  &lt 3 SPACE  &none                 &none           &kp ENTER                             &mkp MB3
-            >;
-            sensor-bindings = <&encoder_msc_down_up>;
-        };
-
-        NUM {
-            bindings = <
-&kp MINUS                   &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp PLUS                                                   &kp CARET         &kp AMPERSAND      &kp TILDE       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp SLASH                   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp ASTERISK  &kp LC(LA(KP_NUMBER_0))      &kp UNDERSCORE  &kp EXCLAMATION   &kp AT_SIGN        &kp HASH        &kp DOLLAR            &kp PERCENT
-&mt LEFT_SHIFT KP_NUMBER_0  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PERIOD    &kp EQUAL                    &trans          &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp LEFT_BRACE  &kp RIGHT_BRACE       &kp BACKSLASH
-&trans                      &trans           &trans           &trans           &trans        &trans                       &trans          &trans                                                                     &kp PIPE
+&kp N1        &kp N2        &kp N3    &kp N4                &kp N5                              &kp N6     &kp N7                 &kp N8    &kp N9     &kp N0
+&trans        &kp LEFT      &kp UP    &kp RIGHT             &kp MINUS       &trans      &trans  &kp EQUAL  &kp LEFT               &kp UP    &kp RIGHT  &trans
+&kp ASTERISK  &kp ASTERISK  &kp DOWN  &kp LEFT_PARENTHESIS  &kp UNDERSCORE  &trans      &trans  &kp PLUS   &kp RIGHT_PARENTHESIS  &kp DOWN  &kp SLASH  &kp FSLH
+&trans        &trans        &trans    &trans                &trans          &trans      &trans  &trans                                                 &trans
             >;
         };
 
@@ -157,7 +105,7 @@
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
-        SCROLL {
+        NotYet {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
@@ -166,21 +114,21 @@
             >;
         };
 
-        MOUSE {
+        Bluetooth {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans    &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                &trans
+&trans  &trans  &trans  &trans  &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans  &trans  &trans  &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
 
-        Bluetooth-setting {
+        SCROLL {
             bindings = <
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
     };
