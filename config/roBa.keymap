@@ -88,6 +88,12 @@
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
             tap-ms = <20>;
         };
+        mouse_scroll_rev: mouse_scroll_rev {
+            compatible = "zmk,behavior-mouse-scroll";
+            #binding-cells = <0>;
+            x-scale = <-80>;
+            y-scale = <-80>;
+        };
     };
 
     keymap {
@@ -151,6 +157,7 @@
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
+            sensor-bindings = <&mouse_scroll_rev>;
         };
 
         MOUSE {
