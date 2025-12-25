@@ -36,7 +36,6 @@
 
 &trackball {
     scroll-layers = <5>;
-    move-factor = <2>;
 
     // arrows {
     //     layers = <3>;
