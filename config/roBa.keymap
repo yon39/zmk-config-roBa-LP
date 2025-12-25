@@ -95,9 +95,9 @@
         default_layer {
             bindings = <
 &mt LEFT_ALT Q  &kp W         &kp E         &kp R           &kp T                                 &kp Y          &kp U  &lt 5 I    &kp O    &kp P
-&kp A           &kp S         &kp D         &kp F           &kp G  &kp LS(LG(S))      &kp MINUS   &kp H          &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
-&kp Z           &kp X         &kp C         &kp V           &kp B  &mo 4              &kp JP_YEN  &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
-&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 1  &kp SPACE          &lt 2 ENTER &kp BACKSPACE                             &kp DEL
+&kp A           &kp S         &kp D         &kp F           &kp G  &kp LS(LG(S))      &kp JP_EQUAL   &kp H          &kp J  &kp K      &kp L    &mt RCTRL SEMICOLON
+&kp Z           &kp X         &kp C         &kp V           &kp B  &mo 4              &kp JP_PLUS  &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
+&kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 1  &kp SPACE          &lt 2 ENTER &kp BACKSPACE                             &kp JP_COLON
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -107,7 +107,7 @@
             bindings = <
 &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp N5                               &kp NUMBER_6     &kp N7           &kp N8           &kp N9          &kp N0
 &kp EXCLAMATION  &kp JP_AT     &kp HASH         &kp DOLLAR    &kp PERCENT   &trans      &trans     &kp JP_CARET     &kp JP_AMPERSAND &kp JP_ASTERISK  &kp JP_LPAREN   &kp JP_RPAREN
-&kp JP_BACKQUOTE &kp JP_TILDE  &kp JP_YEN       &kp JP_PIPE   &trans        &trans      &trans     &kp JP_EQUAL     &kp JP_PLUS      &kp JP_LBRACKET  &kp JP_RBRACKET &kp JP_QUOTE
+&kp JP_BACKQUOTE &kp JP_TILDE  &kp JP_YEN       &kp JP_PIPE   &kp JP_DQUOTE        &trans      &trans     &kp JP_LBRACKET     &kp JP_RBRACKET      &kp JP_LBRACE  &kp JP_RBRACE &kp JP_QUOTE
 &trans           &trans        &trans           &kp LEFT_SHIFT &trans       &kp SPACE   &kp ENTER  &kp DELETE                                                         &kp DELETE
             >;
         };
