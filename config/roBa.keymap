@@ -187,10 +187,10 @@
 
         ARROW {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)    &kp LS(NUMBER_3)  &kp LS(NUMBER_4)     &kp LS(N5)                                          &kp LS(NUMBER_6)       &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
-&kp HOME          &kp LA(LEFT_ARROW)  &kp UP_ARROW      &kp LA(RIGHT_ARROW)  &kp END     &GUID            &kp DELETE             &kp MINUS              &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp LEFT_SHIFT    &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &trans      &pwcpass         &kp SEMI               &kp LS(MINUS)          &kp LS(EQUAL)     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(BACKSLASH)
-&trans            &trans              &trans            &trans               &trans      &lt 6 ENTER      &JRAticketSmartsheet1  &JRAticketSmartsheet2                                                         &kp LS(INT_RO)
+&kp LS(NUMBER_1)    &kp LS(NUMBER_2)    &kp LS(NUMBER_3)     &kp LS(NUMBER_4)     &kp LS(N5)                                          &kp LS(NUMBER_6)       &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
+&kp HOME            &kp LA(LEFT_ARROW)  &kp UP_ARROW         &kp LA(RIGHT_ARROW)  &kp END     &GUID            &kp DELETE             &kp MINUS              &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp LEFT_SHIFT      &kp LEFT_ARROW      &kp DOWN_ARROW       &kp RIGHT_ARROW      &trans      &pwcpass         &kp SEMI               &kp LS(MINUS)          &kp LS(EQUAL)     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(BACKSLASH)
+&kp LG(LEFT_ARROW)  &kp LG(UP_ARROW)    &kp LG(RIGHT_ARROW)  &kp LG(DOWN_ARROW)   &trans      &lt 6 ENTER      &JRAticketSmartsheet1  &JRAticketSmartsheet2                                                         &kp LS(INT_RO)
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -234,10 +234,10 @@
 
         MacArrow {
             bindings = <
-&kp LS(NUMBER_1)  &kp LS(NUMBER_2)    &kp LS(NUMBER_3)  &kp LS(NUMBER_4)     &kp LS(N5)                                              &kp LS(NUMBER_6)       &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
-&kp SEMICOLON     &kp LG(LEFT_ARROW)  &kp UP_ARROW      &kp LG(RIGHT_ARROW)  &kp GRAVE      &macpass          &kp SQT                &kp MINUS              &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
-&kp LS(SEMI)      &kp LEFT_ARROW      &kp DOWN_ARROW    &kp RIGHT_ARROW      &kp LS(GRAVE)  &onepassword      &kp LS(SQT)            &kp LS(MINUS)          &kp LS(EQUAL)     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(BACKSLASH)
-&trans            &trans              &trans            &trans               &trans         &lt 6 ENTER       &JRAticketSmartsheet1  &JRAticketSmartsheet2                                                         &kp UNDERSCORE
+&kp LS(NUMBER_1)        &kp LS(NUMBER_2)      &kp LS(NUMBER_3)         &kp LS(NUMBER_4)        &kp LS(N5)                                              &kp LS(NUMBER_6)       &kp LS(NUMBER_7)  &kp LS(NUMBER_8)  &kp LS(NUMBER_9)   &kp LS(NUMBER_0)
+&kp SEMICOLON           &kp LG(LEFT_ARROW)    &kp UP_ARROW             &kp LG(RIGHT_ARROW)     &kp GRAVE      &macpass          &kp SQT                &kp MINUS              &kp EQUAL         &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp BACKSLASH
+&kp LS(SEMI)            &kp LEFT_ARROW        &kp DOWN_ARROW           &kp RIGHT_ARROW         &kp LS(GRAVE)  &onepassword      &kp LS(SQT)            &kp LS(MINUS)          &kp LS(EQUAL)     &kp LEFT_BRACE    &kp RIGHT_BRACE    &kp LS(BACKSLASH)
+&kp LG(LA(LEFT_ARROW))  &kp LA(LG(UP_ARROW))  &kp LA(LG(RIGHT_ARROW))  &kp LA(LG(DOWN_ARROW))  &trans         &lt 6 ENTER       &JRAticketSmartsheet1  &JRAticketSmartsheet2                                                         &kp UNDERSCORE
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
