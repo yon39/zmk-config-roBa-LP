@@ -47,7 +47,7 @@
     >;
 };
 
-&trackball_listener { input-processors = <&zip_temp_layer 4 15000>; };
+&trackball_listener { input-processors = <&zip_temp_layer 4 9000>; };
 
 &trackball {
     // automouse-layer = <4>;
@@ -67,7 +67,7 @@
     // };
 };
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 150>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 250>; };
 
 &zip_temp_layer { require-prior-idle-ms = <200>; };
 
