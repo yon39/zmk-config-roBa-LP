@@ -146,7 +146,7 @@
         toga: toga {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 4 &trans>;
+            bindings = <&trans &tog 4>;
             label = "TOGA";
         };
     };
