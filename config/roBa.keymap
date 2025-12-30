@@ -190,6 +190,8 @@
 &kp Z         &kp X      &kp C         &kp V                      &kp B        &kp LEFT_SHIFT      &lt 7 SLASH    &kp N                       &kp M  &kp COMMA  &kp DOT  &kp MINUS
 &kp LEFT_WIN  &kp LCTRL  &kp LEFT_ALT  &mt LEFT_SHIFT LANGUAGE_2  &lt 8 SPACE  &lt 2 ENTER         &lt 8 SPACE    &mt RIGHT_SHIFT LANGUAGE_1                             &mt LEFT_WIN AT_SIGN
             >;
+
+            sensor-bindings = <&Mouse_Rotate_encoder>;
         };
 
         NUM {
