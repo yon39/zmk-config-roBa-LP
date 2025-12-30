@@ -160,6 +160,13 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        Mouse_Rotate_encoder: Mouse_Rotate_encoder {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "MOUSE_ROTATE_ENCODER";
+            #sensor-binding-cells = <0>;
+            bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
+        };
     };
 
     keymap {
@@ -172,6 +179,8 @@
 &kp Z      &kp X         &kp C         &kp V                        &kp B        &kp LEFT_SHIFT      &lt 7 SLASH    &kp N                            &kp M  &kp COMMA  &kp DOT  &kp MINUS
 &kp LCTRL  &kp LEFT_WIN  &kp LEFT_ALT  &mt LEFT_SHIFT INT_MUHENKAN  &lt 3 SPACE  &lt 2 ENTER         &lt 3 SPACE    &mt RIGHT_SHIFT INTERNATIONAL_4                             &mt LEFT_CONTROL LEFT_BRACKET
             >;
+
+            sensor-bindings = <&Mouse_Rotate_encoder>;
         };
 
         MacDefault {
@@ -185,10 +194,10 @@
 
         NUM {
             bindings = <
-&kp EQUAL              &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SQT)                                                    &kp DOT    &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9
-&kp LEFT_PARENTHESIS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS          &kp LC(LA(KP_NUMBER_0))      &kp DELETE     &kp SLASH  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6
-&kp RIGHT_PARENTHESIS  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp LS(SEMICOLON)  &kp EQUAL                    &kp LS(SLASH)  &kp EQUAL  &kp PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
-&kp LCTRL              &kp KP_NUMBER_0  &kp SLASH        &trans           &lt 6 SPACE        &trans                       &lt 6 SPACE    &trans                                               &kp NUMBER_0
+&kp EQUAL              &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp LS(SQT)                                              &kp DOT    &kp ASTERISK  &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9
+&kp LEFT_PARENTHESIS   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp MINUS    &kp LC(LA(KP_NUMBER_0))      &kp DELETE     &kp SLASH  &kp MINUS     &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6
+&kp RIGHT_PARENTHESIS  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PLUS     &kp EQUAL                    &kp LS(SLASH)  &kp EQUAL  &kp PLUS      &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3
+&kp LCTRL              &kp KP_NUMBER_0  &kp SLASH        &trans           &lt 6 SPACE  &trans                       &lt 6 SPACE    &trans                                               &kp NUMBER_0
             >;
         };
 
