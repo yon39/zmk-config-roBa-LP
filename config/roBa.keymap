@@ -142,6 +142,13 @@
             bindings = <&kp TAB &kp LEFT_SHIFT &kp ENTER &kp TAB &kp ENTER>;
             label = "JRATICKETSMARTSHEET1";
         };
+
+        toga: toga {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&tog 4 &trans>;
+            label = "TOGA";
+        };
     };
 
     behaviors {
@@ -198,10 +205,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans    &trans  &trans    &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &mkp MB3
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                              &trans
+&toga   &toga   &trans  &trans  &trans                      &trans  &trans    &trans  &trans    &trans
+&toga   &toga   &trans  &trans  &toga   &trans      &trans  &trans  &trans    &trans  &trans    &trans
+&toga   &toga   &trans  &trans  &trans  &trans      &trans  &trans  &mkp MB1  &mo 5   &mkp MB2  &mkp MB3
+&trans  &trans  &trans  &toga   &trans  &trans      &trans  &toga                               &trans
             >;
         };
 
