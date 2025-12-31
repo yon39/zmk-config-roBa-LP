@@ -170,12 +170,30 @@
     };
 };
 
-/* 追加修正: トラックボールセンサーのピン定義 */
+/* トラックボールセンサーのハードウェア定義 */
 &spi0 {
     status = "okay";
     trackball@0 {
         status = "okay";
-        // RoBaの設計に基づき、動き検知用のピン(Xiao D3 = P0.05)を指定
-        motion-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        compatible = "pixart,pmw3610";
+        reg = <0>;
+        spi-max-frequency = <2000000>;
+        irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+        // 必須となった軸の定義を追加
+        zephyr,axis-x = <&input_rel_x>;
+        zephyr,axis-y = <&input_rel_y>;
+    };
+};
+
+/* 入力軸の有効化 */
+/ {
+    input_rel_x: input_rel_x {
+        compatible = "zephyr,input-rel-axis";
+        axis = <INPUT_REL_X>;
+    };
+
+    input_rel_y: input_rel_y {
+        compatible = "zephyr,input-rel-axis";
+        axis = <INPUT_REL_Y>;
     };
 };
