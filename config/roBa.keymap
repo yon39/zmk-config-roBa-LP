@@ -170,18 +170,41 @@
     };
 };
 
-/* トラックボールセンサーのハードウェア定義 */
+/* トラックボールセンサーの最新定義（pinctrl追加） */
 &spi0 {
     status = "okay";
+    // 最新仕様で必須となったピン制御の参照を追加
+    pinctrl-0 = <&spi0_default>;
+    pinctrl-1 = <&spi0_sleep>;
+    pinctrl-names = "default", "sleep";
+
     trackball@0 {
         status = "okay";
         compatible = "pixart,pmw3610";
         reg = <0>;
         spi-max-frequency = <2000000>;
         irq-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
-        // 必須となった軸の定義を追加
         zephyr,axis-x = <&input_rel_x>;
         zephyr,axis-y = <&input_rel_y>;
+    };
+};
+
+/* ピン設定（Xiao BLE用） */
+&pinctrl {
+    spi0_default: spi0_default {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,
+                    <NRF_PSEL(SPIM_MISO, 1, 14)>;
+        };
+    };
+    spi0_sleep: spi0_sleep {
+        group1 {
+            psels = <NRF_PSEL(SPIM_SCK, 1, 13)>,
+                    <NRF_PSEL(SPIM_MOSI, 1, 15)>,
+                    <NRF_PSEL(SPIM_MISO, 1, 14)>;
+            low-power-enable;
+        };
     };
 };
 
