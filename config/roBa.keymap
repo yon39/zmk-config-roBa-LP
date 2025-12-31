@@ -3,7 +3,7 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// レイヤー番号の定義
+// レイヤー番号の定義 [cite: 1]
 #define MOUSE 4
 #define SCROLL 5
 #define NUM 6
@@ -15,11 +15,11 @@
 
 / {
     behaviors {
-        // 自動レイヤー切り替え（0.8秒復帰）の定義
+        // トラックボール検知で一時的にレイヤーを切り替える定義
         zip_temp_layer: zip_temp_layer {
             compatible = "zmk,behavior-input-processor-temp-layer";
             #input-processor-cells = <2>;
-            trackball-only;
+            trackball-only; // トラボ検知時のみ有効
         };
     };
 
@@ -153,7 +153,7 @@
             >;
         };
 
-        // スクロール/矢印レイヤー (SCROLL: 5)
+        // スクロールレイヤー (SCROLL: 5)
         Arrow {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans            &kp LC(LEFT_ARROW)  &kp UP_ARROW    &kp LC(RIGHT_ARROW)  &trans
@@ -164,15 +164,15 @@
         };
     };
 
-    // トラボ検知時のリスナー設定
+    // トラックボール検知の設定
     trackball_listener {
         status = "okay";
-        // MOUSEレイヤー(4)へ移行、800ms操作なしで復帰
+        // 動きを検知したらレイヤー4（MOUSE）へ。800ms（0.8秒）後に復帰
         input-processors = <&zip_temp_layer MOUSE 800>;
     };
 };
 
-/* --- 以下のブロックはビルドエラー回避のための追加設定 --- */
+/* --- ハードウェア設定 (Xiao BLE / roBa 用修正) --- */
 
 &spi0 {
     status = "okay";
