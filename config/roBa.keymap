@@ -163,10 +163,10 @@
             >;
         };
     };
-};
 
-/* トラックボールの挙動設定 */
-&vtrackball {
-    // 操作時にレイヤー4（MOUSE）へ切り替え、800ms（0.8秒）後に復帰
-    input-processors = <&zip_temp_layer MOUSE 800>;
+    // トラックボールの設定ノード（修正ポイント）
+    trackball_listener {
+        status = "okay";
+        input-processors = <&zip_temp_layer MOUSE 800>;
+    };
 };
