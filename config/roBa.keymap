@@ -164,9 +164,18 @@
         };
     };
 
-    // トラックボールの設定ノード（修正ポイント）
     trackball_listener {
         status = "okay";
         input-processors = <&zip_temp_layer MOUSE 800>;
+    };
+};
+
+/* 追加修正: トラックボールセンサーのピン定義 */
+&spi0 {
+    status = "okay";
+    trackball@0 {
+        status = "okay";
+        // RoBaの設計に基づき、動き検知用のピン(Xiao D3 = P0.05)を指定
+        motion-gpios = <&gpio0 5 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
     };
 };
