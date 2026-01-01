@@ -86,7 +86,7 @@
 &kp LCTRL         &kp LGUI  &kp LALT  &lt 6 SPACE  &mkp MB1   &lt_to_layer_0 3 INT_MUHENKAN      &kp RET        &kp BSPC                       &kp RSHFT
             >;
 
-            sensor-bindings = <&scroll_up_down>, <&scroll_up_down>;
+            sensor-bindings = <&inc_dec_kp K_SCROLL_UP K_SCROLL_DOWN>;
         };
 
         FUNCTION {
