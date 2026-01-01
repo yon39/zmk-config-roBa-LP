@@ -3,9 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
 
-// スクロール量の調整（お好みで変更可能: 20-80程度）
-#define ZMK_POINTING_DEFAULT_SCRL_VAL 40
-
 // OS設定を日本語キーボードのまま使用するための変換定義
 #define JP_DQUOTE       AT                // "
 #define JP_AMPERSAND    CARET             // &
@@ -118,28 +115,28 @@
 
         FUNCTION {
             bindings = 
-&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3     &kp NUMBER_4  &kp N5                               &kp NUMBER_6     &kp N7           &kp N8           &kp N9          &kp N0
-&kp EXCLAMATION  &kp JP_AT     &kp HASH         &kp DOLLAR    &kp PERCENT   &trans    &trans       &kp JP_CARET     &kp JP_AMPERSAND &kp JP_ASTERISK  &kp JP_LPAREN   &kp JP_RPAREN
-&kp JP_BACKQUOTE &kp JP_TILDE  &kp JP_YEN       &kp JP_PIPE   &kp JP_DQUOTE &trans    &kp JP_UNDERSCORE     &kp JP_LBRACKET     &kp JP_RBRACKET      &kp JP_LBRACE  &kp JP_RBRACE &kp JP_QUOTE
-&trans           &trans        &trans           &kp LEFT_SHIFT &trans       &kp SPACE   &kp ENTER  &kp DELETE                                                         &kp DELETE
+&kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_4    &kp N5                           &kp NUMBER_6      &kp N7            &kp N8           &kp N9         &kp N0
+&kp EXCLAMATION  &kp JP_AT     &kp HASH      &kp DOLLAR      &kp PERCENT  &trans      &trans  &kp JP_CARET      &kp JP_AMPERSAND  &kp JP_ASTERISK  &kp JP_LPAREN  &kp JP_RPAREN
+&kp JP_BACKQUOTE &kp JP_TILDE  &kp JP_YEN    &kp JP_PIPE     &kp JP_DQUOTE &trans     &kp JP_UNDERSCORE  &kp JP_LBRACKET  &kp JP_RBRACKET  &kp JP_LBRACE    &kp JP_RBRACE  &kp JP_QUOTE
+&trans           &trans        &trans        &kp LEFT_SHIFT  &trans       &kp SPACE   &kp ENTER       &kp DELETE                                             &kp DELETE
             >;
         };
 
         NUM {
             bindings = 
-&kp ESCAPE      &kp UP_ARROW    &trans           &kp F1          &kp F2                            &kp F3   &kp F4   &kp LG(LS(S))     &kp LG(V)  &kp MINUS
-&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F5          &kp F6     &trans         &trans  &kp F7   &kp F8   &trans            &trans     &kp LC(JP_PLUS)
-&kp LC(Z)       &trans          &kp TAB          &kp F9          &kp F10    &trans         &trans  &kp F11  &kp F12  &kp LS(CAPSLOCK)  &trans     &trans
-&trans          &trans          &trans           &kp LEFT_SHIFT  &kp LCTRL  &kp SPACE      &trans  &trans                                         &trans
+&kp ESCAPE      &kp UP_ARROW    &trans           &kp F1          &kp F2                         &kp F3   &kp F4   &kp LG(LS(S))     &kp LG(V)  &kp MINUS
+&kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F5          &kp F6     &trans      &trans  &kp F7   &kp F8   &trans            &trans     &kp LC(JP_PLUS)
+&kp LC(Z)       &trans          &kp TAB          &kp F9          &kp F10    &trans      &trans  &kp F11  &kp F12  &kp LS(CAPSLOCK)  &trans     &trans
+&trans          &trans          &trans           &kp LEFT_SHIFT  &kp LCTRL  &kp SPACE   &trans  &trans                                         &trans
             >;
         };
 
         ARROW {
             bindings = 
-&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                       &trans  &trans  &trans  &trans  &trans
-&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans          &trans                  &trans          &trans                   &trans   &trans      &trans  &trans                          &trans
+&kp ESCAPE      &kp LC(LS(TAB))         &kp UP_ARROW    &kp LC(TAB)              &trans                    &trans  &trans  &trans  &trans  &trans
+&kp HOME        &kp LEFT_ARROW          &kp DOWN_ARROW  &kp RIGHT_ARROW          &kp END  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+&kp LEFT_SHIFT  &kp LG(LS(LEFT_ARROW))  &trans          &kp LG(LS(RIGHT_ARROW))  &trans   &trans   &trans  &trans  &trans  &trans  &trans  &trans
+&trans          &trans                  &trans          &trans                   &trans   &trans   &trans  &trans                          &trans
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
@@ -147,28 +144,28 @@
 
         MOUSE {
             bindings = 
-&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)                      &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans     &mo 5      &mo 5      &trans      &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans  &trans    &trans    &trans  &trans
-&trans  &trans  &trans     &trans     &trans     &trans      &trans  &trans                              &trans
+&trans  &trans  &kp LC(X)  &kp LC(C)  &kp LC(V)                   &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans     &mo 5      &mo 5      &trans   &trans  &trans  &mkp MB1  &mkp MB2  &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans   &trans  &trans  &trans    &trans    &trans  &trans
+&trans  &trans  &trans     &trans     &trans     &trans   &trans  &trans                              &trans
             >;
         };
 
         SCROLL {
             bindings = 
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans  &trans  &trans  &trans                   &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans   &trans  &trans                          &trans
             >;
         };
 
         layer_6 {
             bindings = 
-&trans  &trans        &trans        &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &trans        &trans        &trans        &trans                        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &trans        &trans        &trans        &trans  &trans      &trans    &trans        &trans        &trans        &trans        &trans
+&trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans  &trans      &bootloader  &trans     &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans      &trans    &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
