@@ -111,7 +111,7 @@
             bindings = <
 &kp Q      &kp L     &kp U     &kp COMMA    &kp DOT                                              &kp F      &kp W  &kp R  &kp Y  &kp P
 &kp E      &kp I     &kp A     &kp O        &kp MINUS  &kp ESC                    &kp DEL        &kp K      &kp T  &kp N  &kp S  &kp H
-&kp Z      &kp X     &kp C     &kp V        &kp SEMI   &momkp 2 MB4               &momkp 2 MB5   &kp G      &kp D  &kp M  &kp J  &kp B
+&lt 1 Z    &kp X     &kp C     &kp V        &kp SEMI   &momkp 2 MB4               &momkp 2 MB5   &kp G      &kp D  &kp M  &kp J  &lt 3 B
 &kp LCTRL  &kp LGUI  &kp LALT  &lt 6 SPACE  &mkp MB1   &kpmkp LEFT_SHIFT MB2      &kp BACKSPACE  &kp ENTER                       &kp RSHFT
             >;
 
@@ -120,10 +120,10 @@
 
         FUNCTION {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &kp F1  &kp F2  &kp F3  &kp F4  &kp F5
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F6  &kp F7  &kp F8  &kp F9  &kp F10
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &kp F11
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &kp F12
+&trans  &trans  &trans  &trans  &trans                      &kp F1   &kp F2   &kp F3  &kp F4  &kp F5
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F6   &kp F7   &kp F8  &kp F9  &kp F10
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &kp F11  &kp F12  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                            &trans
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
