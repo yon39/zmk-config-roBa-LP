@@ -42,7 +42,7 @@
             compatible = "zmk,behavior-mod-morph";
             label = "JIS_SEMI";
             #binding-cells = <0>;
-            bindings = <&kp SEMI>, <&kp SINGLE_QUOTE>;  // 通常: ; / Shift: :
+            bindings = <&kp SEMI>, <&kp SINGLE_QUOTE>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
@@ -51,14 +51,14 @@
             compatible = "zmk,behavior-mod-morph";
             label = "JIS_QUOTE";
             #binding-cells = <0>;
-            bindings = <&kp AMPERSAND>, <&kp AT>;  // 通常: ' / Shift: "
+            bindings = <&kp AMPERSAND>, <&kp AT>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        // セミコロン/コロンキーをmodifier-tap対応に
-        mt_semi: mt_semi {
+        // セミコロン/コロンキーをmodifier-tap対応に（長押しでRCTRL）
+        mt_rctrl_semi: mt_rctrl_semi {
             compatible = "zmk,behavior-hold-tap";
-            label = "MT_SEMI";
+            label = "MT_RCTRL_SEMI";
             #binding-cells = <2>;
             flavor = "balanced";
             tapping-term-ms = <180>;
@@ -86,7 +86,7 @@
         };
 
         double_quotation {
-            bindings = <&jis_quote>;  // ← 変更：mod-morphを使用
+            bindings = <&jis_quote>;
             key-positions = <20 21>;
         };
 
@@ -111,7 +111,7 @@
         default_layer {
             bindings = 
 &mt LEFT_ALT Q  &kp W         &kp E         &kp R           &kp T                                 &kp Y          &kp U  &lt 5 I    &kp O    &kp P
-&kp A           &kp S         &kp D         &kp F           &kp G  &kp LS(LG(S))      &kp JP_EQUAL   &kp H          &kp J  &kp K      &kp L    &mt_semi RCTRL 0
+&kp A           &kp S         &kp D         &kp F           &kp G  &kp LS(LG(S))      &kp JP_EQUAL   &kp H          &kp J  &kp K      &kp L    &mt_rctrl_semi RCTRL 0
 &kp Z           &kp X         &kp C         &kp V           &kp B  &mo 4              &kp JP_PLUS  &kp N          &kp M  &kp COMMA  &kp DOT  &kp SLASH
 &kp LCTRL       &kp LEFT_WIN  &kp LEFT_ALT  &kp LEFT_SHIFT  &mo 1  &kp SPACE          &lt 2 ENTER &kp BACKSPACE                             &jis_quote
             >;
