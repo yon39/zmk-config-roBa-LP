@@ -116,7 +116,7 @@
             bindings = <
 &kp ESCAPE      &kp UP_ARROW    &trans           &kp F1          &kp F2                            &kp F3   &kp F4   &kp LG(LS(S))     &kp LG(V)  &kp MINUS
 &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp F5          &kp F6     &trans         &trans  &kp F7   &kp F8   &trans            &trans     &kp LC(JP_PLUS)
-&kp LC(Z)       &trans          &kp TAB          &kp F9          &kp F10    &trans         &trans  &kp F11  &kp F12  &kp LS(CAPSLOCK)  &trans     &trans
+&kp LC(Z)       &trans          &kp TAB          &kp F9          &kp F10    &mo 6          &trans  &kp F11  &kp F12  &kp LS(CAPSLOCK)  &trans     &trans
 &trans          &trans          &trans           &kp LEFT_SHIFT  &kp LCTRL  &kp SPACE      &trans  &trans                                         &trans
             >;
         };
