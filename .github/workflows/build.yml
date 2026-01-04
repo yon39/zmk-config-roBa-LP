@@ -1,5 +1,5 @@
-on: [push, pull_request, workflow_dispatch]
-
-jobs:
-  build:
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+on: 
+  push:
+    branches:
+      - main  # mainブランチへのプッシュで自動実行
+  workflow_dispatch:  # 手動実行も可能
