@@ -118,9 +118,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - Ctl+K
   - Ctl+;
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LEFT SHIFT
@@ -133,16 +133,16 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   OPERATION:
-  - F1
-  - F2
+  - BRI UP
+  - BRI DN
   - Ctl+Sft+TAB
   - Ctl+TAB
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - F10
-  - F11
-  - F12
+  - MUTE
+  - VOL DN
+  - VOL UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctl+Alt+LEFT
@@ -150,16 +150,16 @@ layers:
   - Ctl+Alt+M
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Gui+[
   - '&mkp LCLK'
   - '&mkp RCLK'
-  - {t: ▽, type: trans}
+  - Gui+]
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Gui+-
   - Gui++
-  - {t: ▽, type: trans}
+  - Ctl+UP
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Gui+W
@@ -167,7 +167,7 @@ layers:
   - Gui+Sft+T
   - Gui+N
   - {t: ▽, type: trans}
-  - GLOBE
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -175,7 +175,7 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - GLOBE
+  - {t: ▽, type: trans}
   SETTING:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
