@@ -140,7 +140,7 @@
 
         NUM_SYM {
             bindings = <
-&kp EXCLAMATION                        &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp PIPE          &kp EQUAL
+&kp EXCLAMATION                        &kp AT           &kp HASH      &kp DOLLAR    &kp PERCENT                                &kp CARET             &kp AMPERSAND          &kp ASTRK         &kp BACKSLASH     &kp EQUAL
 &balanced_ht LEFT_SHIFT N1             &kp N2           &kp NUMBER_3  &kp N4        &kp NUMBER_5  &kp KP_PLUS       &kp GRAVE  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp SINGLE_QUOTE  &kp SEMICOLON     &kp TILDE
 &balanced_ht LEFT_CONTROL NUMBER_6     &kp NUMBER_7     &kp N8        &kp NUMBER_9  &kp N0        &kp KP_MINUS      &none      &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &kp LESS_THAN     &kp GREATER_THAN  &kp SLASH
 &balanced_ht LC(LEFT_SHIFT) KP_DIVIDE  &kp KP_MULTIPLY  &kp EQUAL     &mkp MB1      &kp SPACE     &kp TAB           &none      &trans                                                                           &none
@@ -149,10 +149,10 @@
 
         FUNCTION {
             bindings = <
-&none                         &none         &none       &none   &none                             &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
-&balanced_ht LEFT_SHIFT F1    &kp F2        &kp F3      &kp F4  &kp F5   &kp F11      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
-&balanced_ht LEFT_CONTROL F6  &kp F7        &kp F8      &kp F9  &kp F10  &kp F12      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
-&kp LEFT_CONTROL              &kp LEFT_WIN  &kp ESCAPE  &none   &none    &none        &kp DELETE  &kp ENTER                                                      &none
+&kp F11                       &kp F12       &kp F13     &kp F14  &kp F15                         &msc SCRL_LEFT  &msc SCRL_DOWN  &msc SCRL_UP  &msc SCRL_RIGHT  &none
+&balanced_ht LEFT_SHIFT F1    &kp F2        &kp F3      &kp F4   &kp F5   &none      &none       &kp LEFT        &kp DOWN        &kp UP_ARROW  &kp RIGHT        &kp RIGHT_SHIFT
+&balanced_ht LEFT_CONTROL F6  &kp F7        &kp F8      &kp F9   &kp F10  &none      &none       &kp HOME        &kp PAGE_DOWN   &kp PAGE_UP   &kp END          &kp RCTRL
+&kp LEFT_CONTROL              &kp LEFT_WIN  &kp ESCAPE  &none    &none    &none      &kp DELETE  &kp ENTER                                                      &none
             >;
         };
 
