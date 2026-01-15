@@ -111,10 +111,10 @@ layers:
   - UP
   - RIGHT
   - RIGHT SHIFT
+  - LEFT SHIFT
   - F11
   - F12
   - F13
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -133,8 +133,8 @@ layers:
   - {type: held}
   - {t: ▽, type: trans}
   OPERATION:
-  - BRI UP
   - BRI DN
+  - BRI UP
   - Ctl+Sft+TAB
   - Ctl+TAB
   - {t: ▽, type: trans}
@@ -155,7 +155,7 @@ layers:
   - '&mkp RCLK'
   - Gui+]
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Sft+Gui+5
   - {t: ▽, type: trans}
   - Gui+-
   - Gui++
