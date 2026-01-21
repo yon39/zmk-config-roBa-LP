@@ -41,7 +41,7 @@ layers:
   - {t: BACKSPACE, h: SETTING}
   - {t: SPACE, h: SYMBOL}
   - {t: TAB, h: OPERATION}
-  - BACKSPACE
+  - {t: BACKSPACE, h: SETTING}
   - {t: ENTER, h: FUNCARROW}
   - ESCAPE
   SYMBOL:
