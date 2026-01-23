@@ -26,34 +26,7 @@
 };
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        tab {
-            bindings = <&kp TAB>;
-            key-positions = <11 12>;
-        };
-
-        shift_tab {
-            bindings = <&kp LS(TAB)>;
-            key-positions = <12 13>;
-        };
-
-        muhennkann {
-            bindings = <&to_layer_0 INT_MUHENKAN>;
-            key-positions = <11 10>;
-        };
-
-        double_quotation {
-            bindings = <&kp DOUBLE_QUOTES>;
-            key-positions = <20 21>;
-        };
-
-        eq {
-            bindings = <&kp EQUAL>;
-            key-positions = <24 25>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     macros {
         to_layer_0: to_layer_0 {
@@ -73,7 +46,7 @@
         bitw: bitw {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(I) &kp N &kp N &kp U &kp E &kp N &kp D &kp O &kp AT &kp N3 &kp N6 &kp N6 &kp N4>;
+            bindings = <&kp LS(I) &kp N &kp N &kp U &kp E &kp N &kp D &kp O &kp AT_SIGN &kp N3 &kp N6 &kp N6 &kp N4>;
             label = "BITW";
         };
     };
@@ -94,10 +67,10 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R                  &kp T                                                  &kp Y        &kp U  &kp I               &kp O     &kp P
-&kp A             &kp S         &kp D         &kp F                  &kp G        &kp LC(V)                  &kp MINUS      &kp H        &kp J  &lt_to_layer_0 3 K  &kp L     &kp MINUS
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &kp LC(C)                  &kp SEMICOLON  &kp N        &kp M  &mkp MB1            &mkp MB2  &lt_to_layer_0 3 COMMA
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 INT5  &lt 2 SPACE  &lt_to_layer_0 3 INT4      &kp BACKSPACE  &lt 2 ENTER                                       &mt RIGHT_SHIFT DOT
+&kp Q             &kp W         &kp E         &kp R                  &kp T                                                  &kp Y        &kp U  &kp I     &kp O     &kp P
+&kp A             &kp S         &kp D         &kp F                  &kp G        &kp LC(V)                  &kp TAB        &kp H        &kp J  &kp K     &kp L     &kp MINUS
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V                  &kp B        &kp LC(C)                  &kp LS(TAB)    &kp N        &kp M  &mkp MB1  &mkp MB2  &lt_to_layer_0 3 COMMA
+&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &lt_to_layer_0 1 INT5  &lt 2 SPACE  &lt_to_layer_0 3 INT4      &kp BACKSPACE  &lt 2 ENTER                             &mt RIGHT_SHIFT DOT
             >;
 
             sensor-bindings = <&inc_dec_kp PG_UP PAGE_DOWN>;
@@ -105,10 +78,10 @@
 
         NUM {
             bindings = <
-&kp LPAR          &kp RPAR      &kp MINUS     &kp CARET  &kp INT_YEN                          &kp SLASH  &kp N7  &kp N8  &kp N9  &kp MINUS
-&kp SEMI          &kp COLON     &kp AT        &kp LBKT   &kp RBKT     &kp ESCAPE      &trans  &kp ASTRK  &kp N4  &kp N5  &kp N6  &kp PLUS
-&kp LEFT_SHIFT    &kp COMMA     &kp DOT       &kp SLASH  &kp BSLH     &kp TAB         &trans  &kp N0     &kp N1  &kp N2  &kp N3  &kp DOT
-&kp LEFT_CONTROL  &kp LEFT_WIN  &kp LEFT_ALT  &trans     &trans       &trans          &trans  &trans                             &mt RIGHT_SHIFT EQUAL
+&kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp MINUS     &kp EQUAL         &kp INT_YEN                                &kp SLASH     &kp N7  &kp N8  &kp N9  &kp MINUS
+&kp SEMI              &kp SQT                &kp AT_SIGN   &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp ESCAPE      &trans  &kp ASTERISK  &kp N4  &kp N5  &kp N6  &kp KP_PLUS
+&kp LEFT_SHIFT        &kp COMMA              &kp DOT       &kp SLASH         &kp INT1           &kp TAB         &trans  &kp N0        &kp N1  &kp N2  &kp N3  &kp DOT
+&kp LEFT_CONTROL      &kp LEFT_WIN           &kp LEFT_ALT  &trans            &trans             &trans          &trans  &trans                                &mt RIGHT_SHIFT EQUAL
             >;
 
             sensor-bindings = <&inc_dec_kp LC(Y) LC(Z)>;
